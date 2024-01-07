@@ -1,1 +1,1 @@
-web: gonicorn lithium.wsgi
+web: gunicorn lithium.wsgi
