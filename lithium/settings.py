@@ -32,7 +32,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['lithium2023.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['8000-ahmadalhindi-lithium-bat-zcupc8au15.us2.codeanyapp.com']
 
 
 # Application definition
