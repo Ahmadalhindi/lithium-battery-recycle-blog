@@ -11,11 +11,11 @@ class PostListView(generic.ListView):
     def get_queryset(self):
         category_name = self.kwargs.get('category_name', None)
         if category_name:
-            return Post.objects.filter(categories__name=category_name)
+            return Post.objects.filter(category__name=category_name)
         else:
             return Post.objects.all()
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['category'] = Category.objects.all()
+        context['categories'] = Category.objects.all()
         return context

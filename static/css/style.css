@@ -1,0 +1,23 @@
+/* .category-button {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px;
+    background-color: #3498db;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+
+    margin-left: auto;
+    margin-right: auto;
+} */
+
+.center-anchor {
+    text-align: center;
+}
+
+.center-anchor a {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px;
+}
