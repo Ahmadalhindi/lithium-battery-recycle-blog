@@ -19,3 +19,27 @@ class PostListView(generic.ListView):
         context = super().get_context_data(**kwargs)
         context['categories'] = Category.objects.all()
         return context
+
+
+class PostDetail(generic.View):
+
+    def get(self, request, slug, *args, **kwargs):
+        queryset = Post.objects.filter(status=1)
+        post = get_object_or_404(queryset, slug=slug)
+        category = post.category
+        comments = post.comments.filter(approved=True).order_by("created_at")
+        liked = False
+        if post.likes.filter(id=self.request.user.id).exists():
+            liked = True
+
+        return render(
+            request,
+            "post_detail.html",
+            {
+                "category": category,
+                "post": post,
+                "comments": comments,
+                "liked": liked,
+                "comment_form": CommentForm()
+            },
+        )
