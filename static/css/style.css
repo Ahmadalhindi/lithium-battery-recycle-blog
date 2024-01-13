@@ -47,3 +47,7 @@
     text-align: center;
     justify-content: center;
 }
+
+.custom-left {
+    margin-right: auto;
+}
