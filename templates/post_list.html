@@ -33,7 +33,7 @@
                 <small class="text-body-secondary">{{ post.updated_at }}</small>
               </p>
               <a
-                href=""
+                href="{% url 'post_detail' post.slug  %}"
                 class="btn btn-outline-success btn-sm"
                 >Read More</a
               >
