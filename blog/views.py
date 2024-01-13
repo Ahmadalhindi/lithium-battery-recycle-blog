@@ -40,6 +40,5 @@ class PostDetail(generic.View):
                 "post": post,
                 "comments": comments,
                 "liked": liked,
-                "comment_form": CommentForm()
             },
         )
