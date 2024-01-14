@@ -22,7 +22,6 @@
     padding: 10px;
 }
 
-
 /* Center the text in the card */
 .card-body {
     justify-content: center;
@@ -41,7 +40,6 @@
 .card-title {
     text-align: center;
 }
-
 
 .btn btn-success {
     text-align: center;
@@ -86,7 +84,6 @@
     z-index: 100;
 }
 
-
 .post-title {
     margin-top: 20%;
     margin-left: 5%;
@@ -95,4 +92,15 @@
 .post-subtitle {
     margin-left: 5%;
     color: lightgray;
+}
+
+.btn-signup {
+    background-color: #23BBBB;
+    color: #fff;
+}
+
+.btn-signup:hover,
+.btn-signup:active {
+    background-color: #fff;
+    color: #23BBBB;
 }
