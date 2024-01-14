@@ -52,14 +52,24 @@
           <ul class="navbar-nav ml-auto">
             {% if user.is_authenticated %}
             <li class="nav-item">
-              <a class="btn btn-outline-success" href="#">Log out</a>
+              <a
+                class="btn btn-outline-success"
+                href="{% url 'account_logout' %}"
+                >Log out</a
+              >
             </li>
             {% else %}
             <li class="nav-item">
-              <a class="btn btn-success" href="#">Sign up</a>
+              <a class="btn btn-success" href="{% url 'account_signup' %}"
+                >Sign up</a
+              >
             </li>
             <li class="nav-item">
-              <a class="btn btn-outline-success" href="#">Log in</a>
+              <a
+                class="btn btn-outline-success"
+                href="{% url 'account_login' %}"
+                >Log in</a
+              >
             </li>
             {% endif %}
           </ul>
