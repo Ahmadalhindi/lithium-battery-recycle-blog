@@ -36,13 +36,49 @@
         <p class="card-text">{{ post.content | safe }}</p>
         <div class="row">
           <div class="col-1">
-            <!-- The number of likes -->
-            <strong class="text-secondary"
-              ><i
-                class="fa-brands fa-gratipay fa-2xl"
-                style="color: #399d4a"
-              ></i>
-              {{ post.number_of_likes }}
+            <strong>
+              {% if user.is_authenticated %}
+              <form
+                class="d-inline"
+                action="{% url 'post_like' post.slug %}"
+                method="POST"
+              >
+                {% csrf_token %} {% if liked %}
+                <button
+                  type="submit"
+                  name="blogpost_id"
+                  value="{{post.slug}}"
+                  class="btn-like"
+                >
+                  <i
+                    class="fa-regular fa-heart fa-2xl"
+                    style="color: #399d4a"
+                  ></i>
+                </button>
+                {% else %}
+                <button
+                  type="submit"
+                  name="blogpost_id"
+                  value="{{post.slug}}"
+                  class="btn-like"
+                >
+                  <i
+                    class="fa-solid fa-heart-circle-bolt fa-2xl"
+                    style="color: #399d4a"
+                  ></i>
+                </button>
+                {% endif %}
+              </form>
+              {% else %}
+              <span class="text-secondary"
+                ><i
+                  class="fa-brands fa-gratipay fa-2xl"
+                  style="color: #399d4a"
+                ></i
+              ></span>
+              {% endif %}
+              <!-- The number of likes -->
+              <span class="text-secondary">{{ post.number_of_likes }} </span>
             </strong>
           </div>
           <div class="col-1">
