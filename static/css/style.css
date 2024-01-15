@@ -94,13 +94,12 @@
     color: lightgray;
 }
 
-.btn-signup {
-    background-color: #23BBBB;
-    color: #fff;
+.link {
+    color: #28aa53;
+    text-decoration: underline;
 }
 
-.btn-signup:hover,
-.btn-signup:active {
-    background-color: #fff;
-    color: #23BBBB;
+.link:hover {
+    font-weight: bolder;
+    text-decoration: none;
 }
