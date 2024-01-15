@@ -103,11 +103,3 @@
     font-weight: bolder;
     text-decoration: none;
 }
-
-p>.font-weight-bold {
-    font-weight: bold;
-}
-
-.container:focus {
-    background-color: #28aa53;
-}
