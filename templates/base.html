@@ -138,14 +138,79 @@
       </div>
     </section>
 
-    <section class="flex-shrink-0 main-bg">
+    <main class="flex-shrink-0 main-bg">
       {% block content %}
       <!-- Content Goes here -->
       {% endblock content %}
-    </section>
+    </main>
 
-    <!-- Footer -->
-    <footer></footer>
+    <!-- Remove the container if you want to extend the Footer to full width. -->
+    <section class="container my-5 pt-5">
+      <!-- Footer -->
+      <footer
+        class="text-center text-lg-start text-dark"
+        style="background-color: white"
+      >
+        <!-- Social media -->
+        <div
+          class="d-flex justify-content-between p-4 text-white"
+          style="background-color: #21d192; font-size: larger"
+        >
+          <div class="me-5">
+            <span>Get connected with us on social networks:</span>
+          </div>
+          <div>
+            <a
+              href="https://facebook.com/"
+              target="_blank"
+              rel="noopener"
+              aria-label="visit our facebook page"
+              class="text-white me-4"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a
+              href="https://twitter.com/"
+              target="_blank"
+              rel="noopener"
+              aria-label="visit our twitter page"
+              class="text-white me-4"
+            >
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a
+              href="https://instagram.com/"
+              target="_blank"
+              rel="noopener"
+              aria-label="visit our instagram page"
+              class="text-white me-4"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              href="https://linkedin.com/"
+              target="_blank"
+              rel="noopener"
+              aria-label="visit our linkedin page"
+              class="text-white me-4"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a
+              href="https://github.com/Ahmadalhindi"
+              target="_blank"
+              rel="noopener"
+              aria-label="visit my github page"
+              class="text-white me-4"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+          <!-- Right -->
+        </div>
+        <!-- Section: Social media -->
+      </footer>
+    </section>
 
     <script>
       setTimeout(function () {
