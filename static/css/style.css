@@ -96,7 +96,7 @@
 
 .link {
     color: #28aa53;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .link:hover {
