@@ -4,6 +4,7 @@ from django.http import HttpResponseRedirect
 from .models import Category, Post
 from .forms import CommentForm
 
+
 class PostListView(generic.ListView):
     model = Post
     queryset = Post.objects.filter(status=1).order_by("created_at")

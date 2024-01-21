@@ -25,12 +25,12 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg bg-body-light">
       <div class="container">
-        <a class="navbar-brand" href="">
+        <a class="navbar-brand" href="#">
           <img
-            src=""
+            src="https://res.cloudinary.com/dijx7wwua/image/upload/v1705840184/logo_image_vmqotm.webp"
             alt="Lithium Battery Recycle Blog"
-            width="30"
-            height="24"
+            width="100%"
+            height="40"
           />
         </a>
         <button
@@ -51,32 +51,47 @@
             </li>
           </ul>
           <ul class="navbar-nav ml-auto">
-            {% if user.is_authenticated %}
-            <li class="nav-item">
-              <a
-                class="btn btn-outline-success"
-                href="{% url 'account_logout' %}"
-                >Log out</a
-              >
-            </li>
-            {% else %}
-            <li class="nav-item">
-              <a class="btn btn-success" href="{% url 'account_signup' %}"
-                >Sign up</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="btn btn-outline-success"
-                href="{% url 'account_login' %}"
-                >Log in</a
-              >
-            </li>
-            {% endif %}
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              {% if user.is_authenticated %}
+              <li class="nav-item">
+                <a
+                  class="btn btn-outline-success me-md-2"
+                  href="{% url 'account_logout' %}"
+                  >Log out</a
+                >
+              </li>
+              {% else %}
+              <li class="nav-item">
+                <a class="btn btn-success" href="{% url 'account_signup' %}"
+                  >Sign up</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="btn btn-outline-success"
+                  href="{% url 'account_login' %}"
+                  >Log in</a
+                >
+              </li>
+              {% endif %}
+            </div>
           </ul>
         </div>
       </div>
+      §
     </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 center-image">
+          <img
+            src="https://res.cloudinary.com/dijx7wwua/image/upload/v1705840184/background_image_suojbw.webp"
+            alt="Cover Image"
+            class="img-fluid"
+          />
+        </div>
+      </div>
+    </div>
 
     <!-- Alerts messages -->
     <div class="container">
@@ -100,6 +115,25 @@
         </div>
       </div>
     </div>
+
+    <!--     <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="list-group">
+              {% for category in categories %}
+              <a
+                href="{% url 'post_list_by_category' category_name=category.name %}"
+                class="list-group-item list-group-item-action category-link"
+                data-category="{{ category.id }}"
+                >{{ category.name }}</a
+              >
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
 
     <!--     <section>
         <div class="container">
@@ -250,11 +284,13 @@
     </section>
 
     <script>
-      setTimeout(function () {
-        let messages = document.getElementById("msg");
-        let alert = new bootstrap.Alert(messages);
-        alert.close();
-      }, 2500);
+      // Add this script to toggle the active class on click
+      $(document).ready(function () {
+        $(".category-link").click(function () {
+          $(".category-link").removeClass("active");
+          $(this).addClass("active");
+        });
+      });
     </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
