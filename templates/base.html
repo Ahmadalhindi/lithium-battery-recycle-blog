@@ -23,7 +23,10 @@
 
   <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg bg-body-light">
+    <nav
+      class="navbar navbar-expand-lg bg-body-light"
+      style="margin-top: 30px; margin-bottom: 30px"
+    >
       <div class="container">
         <a class="navbar-brand" href="#">
           <img
@@ -116,55 +119,21 @@
       </div>
     </div>
 
-    <!--     <section>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-3">
-            <div class="list-group">
-              {% for category in categories %}
-              <a
-                href="{% url 'post_list_by_category' category_name=category.name %}"
-                class="list-group-item list-group-item-action category-link"
-                data-category="{{ category.id }}"
-                >{{ category.name }}</a
-              >
-              {% endfor %}
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
-    <!--     <section>
-        <div class="container">
-        <div class="row">
-            <div class="col-md-3">
-            <h2>Categories</h2>
-            <ul class="list-group">
-                {% for category in categories %}
-                <li>
-                <a
-                    href="{% url 'post_list_by_category' category_name=category.name %}"
-                    >{{ category.name }}</a
-                >
-                </li>
-                {% endfor %}
-            </ul>
-            </div>
-        </div>
-        </div>
-    </section> -->
-
     <section>
       <div class="container">
         <div class="row">
           <div class="col-md-12 center-anchor">
-            <h2>Categories</h2>
             {% for category in categories %}
             <a
               href="{% url 'post_list_by_category' category_name=category.name %}"
               class="btn btn-success"
-              >{{ category.name }}</a
+              ><i
+                class="fa-solid fa-battery-quarter fa-rotate-by fa-sm"
+                style="--fa-rotate-angle: 20deg"
+              >
+                Category
+              </i>
+              {{category.name}}</a
             >
             {% endfor %}
           </div>
@@ -191,7 +160,7 @@
           style="background-color: #21d192; font-size: larger"
         >
           <div class="me-5">
-            <span>Get connected with us on social networks:</span>
+            <span>YOU CAN ALSO FIND US ON SOCIAL MEDIA</span>
           </div>
           <div>
             <a
@@ -284,6 +253,11 @@
     </section>
 
     <script>
+      setTimeout(function () {
+        let messages = document.getElementById("msg");
+        let alert = new bootstrap.Alert(messages);
+        alert.close();
+      }, 2500);
       // Add this script to toggle the active class on click
       $(document).ready(function () {
         $(".category-link").click(function () {
