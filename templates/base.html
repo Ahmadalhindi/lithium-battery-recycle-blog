@@ -32,6 +32,7 @@
       style="margin-top: 30px; margin-bottom: 30px"
     >
       <div class="container">
+        <!-- Logo Image -->
         <a class="navbar-brand" href="#">
           <img
             src="https://res.cloudinary.com/dijx7wwua/image/upload/v1705840184/logo_image_vmqotm.webp"
@@ -85,9 +86,9 @@
           </ul>
         </div>
       </div>
-      §
     </nav>
 
+    <!-- Background picture -->
     <div class="container">
       <div class="row">
         <div class="col-md-12 center-image">
@@ -123,37 +124,40 @@
       </div>
     </div>
 
+    <!-- Categories buttons -->
     <section>
       <div class="container">
         <div class="row">
-          <div class="col-md-12 center-anchor">
-            {% for category in categories %}
-            <a
-              href="{% url 'post_list_by_category' category_name=category.name %}"
-              class="btn btn-success"
-              ><i
-                class="fa-solid fa-battery-quarter fa-rotate-by fa-sm"
-                style="--fa-rotate-angle: 20deg"
+          <div class="col-md-12 center-anchor col-custom">
+            <div class="mt-5 mb-5">
+              {% for category in categories %}
+              <a
+                href="{% url 'post_list_by_category' category_name=category.name %}"
+                class="btn btn-success"
+                ><i
+                  class="fa-solid fa-battery-quarter fa-rotate-by fa-sm"
+                  style="--fa-rotate-angle: 20deg"
+                >
+                  Category
+                </i>
+                {{category.name}}</a
               >
-                Category
-              </i>
-              {{category.name}}</a
-            >
-            {% endfor %}
+              {% endfor %}
+            </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Post list -->
     <main class="flex-shrink-0 main-bg">
       {% block content %}
       <!-- Content Goes here -->
       {% endblock content %}
     </main>
 
-    <!-- Remove the container if you want to extend the Footer to full width. -->
+    <!-- Footer -->
     <section class="container my-5 pt-5">
-      <!-- Footer -->
       <footer
         class="text-center text-lg-start text-dark"
         style="background-color: white"
