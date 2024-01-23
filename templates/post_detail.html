@@ -62,10 +62,7 @@
                   value="{{post.slug}}"
                   class="btn-like"
                 >
-                  <i
-                    class="fa-solid fa-heart fa-xl"
-                    style="color: #57d147"
-                  ></i>
+                  <i class="fa-solid fa-heart fa-xl" style="color: #57d147"></i>
                 </button>
                 {% endif %}
               </form>
@@ -84,10 +81,7 @@
           <div class="col-1">
             {% with comments.count as total_comments %}
             <strong class="text-secondary"
-              ><i
-                class="fa-solid fa-comments fa-xl"
-                style="color: #57d147"
-              ></i>
+              ><i class="fa-solid fa-comments fa-xl" style="color: #57d147"></i>
               <!-- Total_comments -->
               {{ total_comments }}</strong
             >
@@ -143,5 +137,6 @@
       </div>
     </div>
   </div>
-  {% endblock content %}
 </div>
+
+{% endblock content %}

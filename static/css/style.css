@@ -1,7 +1,7 @@
 .center-anchor {
     text-align: center;
 }
-
+t
 .center-anchor a {
     display: inline-block;
     margin: 5px;
@@ -51,7 +51,7 @@
     overflow: hidden;
 }
 
-.masthead-image:after {
+/* .masthead-image:after {
     content: "";
     position: absolute;
     top: 0;
@@ -64,7 +64,7 @@
     transform: skew(15deg);
     z-index: 100;
 }
-
+ */
 .post-title {
     margin-top: 20%;
     margin-left: 5%;
