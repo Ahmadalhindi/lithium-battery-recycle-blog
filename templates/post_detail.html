@@ -3,11 +3,13 @@
 <div class="masthead">
   <div class="container">
     <div class="row g-0">
-      <li>
-        <a href="{% url 'post_list_by_category' category_name=category.name %}"
-          >Back to Category list</a
-        >
-      </li>
+      <div class="col-md-12 center-anchor col-custom mb-3">
+        <tab>
+          <a href="{% url 'post_list_by_category' category_name=category.name %}" class="btn btn-success"
+            >Back to Category list</a
+          >
+        </tab>
+      </div>
       <div class="col-md-6 masthead-text">
         <!-- Post title -->
         <h1 class="post-title">{{ post.title }}</h1>
@@ -87,6 +89,13 @@
             >
             {% endwith %}
           </div>
+        </div>
+        <div class="col-md-12 center-anchor col-custom mb-3">
+          <tab>
+            <a href="{% url 'post_list_by_category' category_name=category.name %}" class="btn btn-success"
+              >Back to Category list</a
+            >
+          </tab>
         </div>
       </div>
     </div>
