@@ -38,6 +38,7 @@
     display: inline-block;
     height: 33vh;
     width: 100%;
+    height: 100%;
 }
 
 .masthead-text {
@@ -51,7 +52,7 @@
     overflow: hidden;
 }
 
-/* .masthead-image:after {
+.masthead-image:after {
     content: "";
     position: absolute;
     top: 0;
@@ -64,7 +65,7 @@
     transform: skew(15deg);
     z-index: 100;
 }
- */
+
 
 .post-title {
     margin-top: 20%;
@@ -80,12 +81,9 @@
     color: #28aa53;
     text-decoration: none;
     font-weight: bold;
-    
+
 }
 
-/* .page-link {
-    color: #28aa53;
-} */
 
 .link {
     color: #28aa53;
@@ -110,4 +108,13 @@
 
 section {
     margin-top: 50px;
+}
+
+.post-content {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    /* Number of lines to show */
+    -webkit-box-orient: vertical;
 }
