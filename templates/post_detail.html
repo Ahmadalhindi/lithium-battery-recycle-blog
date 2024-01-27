@@ -4,6 +4,7 @@
   <div class="container">
     <div class="row g-0">
       <div class="col-md-12 center-anchor col-custom mb-3">
+        <!-- Back tab to category list -->
         <tab>
           <a href="{% url 'post_list_by_category' category_name=category.name %}" class="btn btn-success"
             >Back to Category list</a
@@ -11,9 +12,9 @@
         </tab>
       </div>
       <div class="col-md-6 masthead-text">
-        <!-- Post title -->
+        <!-- post title -->
         <h1 class="post-title">{{ post.title }}</h1>
-        <!-- Post author goes before the | the post's created date goes after -->
+        <!-- post author and date created -->
         <p class="post-subtitle">{{ post.author }} | {{ post.created_at }}</p>
       </div>
       <div class="d-none d-md-block col-md-6 masthead-image">
@@ -34,7 +35,7 @@
   <div class="row">
     <div class="col card mb-4 mt-3 left top">
       <div class="card-body">
-        <!-- The post content -->
+        <!-- post content -->
         <p class="card-text">{{ post.content | safe }}</p>
         <div class="row">
           <div class="col-1">
@@ -91,6 +92,7 @@
           </div>
         </div>
         <div class="col-md-12 center-anchor col-custom mb-3">
+          <!-- Back tab to category list -->
           <tab>
             <a href="{% url 'post_list_by_category' category_name=category.name %}" class="btn btn-success"
               >Back to Category list</a
@@ -112,11 +114,11 @@
         <!-- for loop to iterate through each comment in comments -->
         {% for comment in comments %}
         <div class="comments" style="padding: 10px">
+          <!-- Comment name -->
           <p class="font-weight-bold">
-            <!-- The commenter's name -->
             {{ comment.name }}
+            <!-- Comment date -->
             <span class="text-muted font-weight-normal">
-              <!-- The comment's date -->
               {{ comment.created_at }}
             </span>
             wrote:
