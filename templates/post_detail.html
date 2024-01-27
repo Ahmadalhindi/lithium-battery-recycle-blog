@@ -21,11 +21,12 @@
         <!-- The featured image URL -->
         {% if "placeholder" in post.featured_image.url %}
         <img
+          alt="card-image-blog"
           src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg"
           width="100%"
         />
         {% else %}
-        <img src=" {{ post.featured_image.url }}" width="100%" />
+        <img src=" {{ post.featured_image.url }}" alt="card-image-blog-default" width="100%" />
         {% endif %}
       </div>
     </div>
