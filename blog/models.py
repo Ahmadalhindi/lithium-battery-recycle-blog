@@ -22,7 +22,7 @@ class Category(models.Model):
         """
         Returns the name of the category as its string representation.
         """
-         return self.name
+        return self.name
 
 
 class Post(models.Model):

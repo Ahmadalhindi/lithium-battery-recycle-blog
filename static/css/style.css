@@ -1,20 +1,22 @@
-body {
-    font-family: 'Playfair Display', serif;
-}
-
-h3 {
+h3, h4 {
     font-family: 'Playfair Display', serif;
     font-weight: 500;
     font-style: italic;
 }
 
-h4, h5 {
-    font-family: 'Black Ops One', system-ui, serif;
+h5 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
 }
 
 P {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
+}
+
+/* navigation bar */
+.nav-link {
+    font-family: 'Playfair Display', serif;
 }
 
 /* post-detail */
