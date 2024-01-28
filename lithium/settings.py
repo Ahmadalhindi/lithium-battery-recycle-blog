@@ -34,7 +34,7 @@ DEBUG = False
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ['8000-ahmadalhind-lithiumbatt-4ws8a93a5da.ws-eu107.gitpod.io']
+ALLOWED_HOSTS = ['lithium2023-734017e000a2.herokuapp.com']
 
 
 # Application definition
