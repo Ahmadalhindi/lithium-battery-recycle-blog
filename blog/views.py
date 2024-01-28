@@ -28,6 +28,9 @@ class PostListView(generic.ListView):
         """
         Get the queryset for the post list view, optionally filtered by category.
 
+        If category_name is provided in the URL kwargs, filter posts by the specified category.
+        If not, return all posts.
+
         Returns:
             QuerySet: Filtered queryset of posts.
         """
@@ -39,7 +42,7 @@ class PostListView(generic.ListView):
 
     def get_context_data(self, **kwargs):
         """
-        Get additional context data for the post list view, including all categories.
+        Get additional context data for the post list view, including all categories
 
         Returns:
             dict: Additional context data.
