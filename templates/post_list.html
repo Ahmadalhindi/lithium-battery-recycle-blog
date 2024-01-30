@@ -14,13 +14,13 @@
                 class="card-img"
                 alt="card-image-blog"
                 src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg"
-              />
+              >
               {% else %}
               <img
                 class="card-img"
                 alt="card-image-blog-default"
                 src=" {{ post.featured_image.url }}"
-              />
+              >
               {% endif %}
               <div class="image-flash">
                 <p class="author">Author: {{ post.author }}</p>

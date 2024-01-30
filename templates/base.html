@@ -3,7 +3,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Lithium Battery Recycle Blog to share knowledge and sustainability by publish blogs about improving recycle lithium battery">
     <meta name="keywords" content="blog, recycle, lithium battery, industry, green, sustainability, Stockholm">
     <title>Lithium Battery Recycle Blog</title>
@@ -11,21 +12,21 @@
       rel="stylesheet"
       type="text/css"
       href="{% static 'css/style.css' %}"
-    />
-    <link rel="icon"type="image/x-icon" href="{% static 'favicon/favicon.svg' %}">
+    >
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon/favicon.svg' %}">
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
-    />
+    >
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
       integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    />
+    >
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
@@ -40,15 +41,13 @@
     <nav
       class="navbar navbar-expand-lg bg-body-light"
     >
-      <div class="container">
+      <div class="container-fluid">
         <!-- Logo Image -->
         <a class="navbar-brand" href="{% url 'home' %}">
           <img
           src="{% static 'template_images/logo.webp' %}"
             alt="Lithium Battery Recycle Blog"
-            width="100%"
-            height="40px"
-          />
+          >
         </a>
         <button
           class="navbar-toggler"
@@ -73,8 +72,7 @@
               <a class="nav-link" href="#contact">Contact</a>
             </li>
           </ul>
-          <ul class="navbar-nav ml-auto">
-            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <ul class="navbar-nav ml-auto d-grid gap-2 d-md-flex justify-content-md-end">
               {% if user.is_authenticated %}
               <li class="nav-item">
                 <a
@@ -97,7 +95,6 @@
                 >
               </li>
               {% endif %}
-            </div>
           </ul>
         </div>
       </div>
@@ -134,7 +131,7 @@
           src="{% static 'template_images/background.webp' %}"
             alt="Cover Image"
             class="img-fluid"
-          />
+          >
         </div>
       </div>
     </div>
@@ -173,110 +170,108 @@
 
     <!-- Footer -->
     <div id="contact">
-      <section class="container my-5 pt-5">
-        <footer
-          class="text-center text-lg-start text-dark"
-          style="background-color: white"
+      <footer
+        class="text-center text-lg-start text-dark"
+        style="background-color: white"
+      >
+        <!-- Social media -->
+        <div
+          class="d-flex justify-content-between p-4 text-white"
+          style="background-color: #157347; font-size: larger"
         >
-          <!-- Social media -->
-          <div
-            class="d-flex justify-content-between p-4 text-white"
-            style="background-color: #157347; font-size: larger"
-          >
-            <div class="me-5">
-              <span><h4>YOU CAN ALSO FIND US ON SOCIAL MEDIA</h4></span>
-            </div>
-            <div>
-              <a
-                href="https://facebook.com/"
-                target="_blank"
-                rel="noopener"
-                aria-label="visit our facebook page"
-                class="text-white me-4"
-              >
-              <i class="fa-brands fa-facebook-f"></i>
-              </a>
-              <a
-                href="https://twitter.com/"
-                target="_blank"
-                rel="noopener"
-                aria-label="visit our twitter page"
-                class="text-white me-4"
-              >
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a
-                href="https://instagram.com/"
-                target="_blank"
-                rel="noopener"
-                aria-label="visit our instagram page"
-                class="text-white me-4"
-              >
-                <i class="fab fa-instagram"></i>
-              </a>
-              <a
-                href="https://linkedin.com/"
-                target="_blank"
-                rel="noopener"
-                aria-label="visit our linkedin page"
-                class="text-white me-4"
-              >
-                <i class="fab fa-linkedin"></i>
-              </a>
-              <a
-                href="https://github.com/Ahmadalhindi"
-                target="_blank"
-                rel="noopener"
-                aria-label="visit my github page"
-                class="text-white me-4"
-              >
-                <i class="fab fa-github"></i>
-              </a>
-            </div>
+          <div class="me-5">
+            <span>YOU CAN ALSO FIND US ON SOCIAL MEDIA</span>
           </div>
-          <!-- About us -->
-            <div class="container text-center text-md-start mt-5">
-              <div class="row mt-3">
-                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                  <h6 class="text-uppercase fw-bold">About Us</h6>
-                  <hr
-                    class="mb-4 mt-0 d-inline-block mx-auto"
-                    style="width: 60px; background-color: #7c4dff; height: 2px"
-                  />
-                  <p>
-                    Blog website to share the knowledge about recycling lithium
-                    battery, and how to improve it with efficient and effective
-                    way.
-                  </p>
-                </div>
-                <!-- Contact Us -->
-                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                  <h6 class="text-uppercase fw-bold">Contact</h6>
-                  <hr
-                    class="mb-4 mt-0 d-inline-block mx-auto"
-                    style="width: 60px; background-color: #7c4dff; height: 2px"
-                  />
-                  <p>
-                    <i class="fas fa-home mr-3"></i> Stockholm, solna 169 97,
-                    Sweden
-                  </p>
-                  <p><i class="fas fa-envelope mr-3"></i> info@gmail.com</p>
-                  <p><i class="fas fa-phone mr-3"></i> + 46 534 567 88</p>
-                </div>
+          <div>
+            <a
+              href="https://facebook.com/"
+              target="_blank"
+              rel="noopener"
+              aria-label="visit our facebook page"
+              class="text-white me-4"
+            >
+            <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a
+              href="https://twitter.com/"
+              target="_blank"
+              rel="noopener"
+              aria-label="visit our twitter page"
+              class="text-white me-4"
+            >
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a
+              href="https://instagram.com/"
+              target="_blank"
+              rel="noopener"
+              aria-label="visit our instagram page"
+              class="text-white me-4"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              href="https://linkedin.com/"
+              target="_blank"
+              rel="noopener"
+              aria-label="visit our linkedin page"
+              class="text-white me-4"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a
+              href="https://github.com/Ahmadalhindi"
+              target="_blank"
+              rel="noopener"
+              aria-label="visit my github page"
+              class="text-white me-4"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <!-- About us -->
+          <div class="container text-center text-md-start mt-5">
+            <div class="row mt-3">
+              <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                <h6 class="text-uppercase fw-bold">About Us</h6>
+                <hr
+                  class="mb-4 mt-0 d-inline-block mx-auto"
+                  style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+                <p>
+                  Blog website to share the knowledge about recycling lithium
+                  battery, and how to improve it with efficient and effective
+                  way.
+                </p>
+              </div>
+              <!-- Contact Us -->
+              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                <h6 class="text-uppercase fw-bold">Contact</h6>
+                <hr
+                  class="mb-4 mt-0 d-inline-block mx-auto"
+                  style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+                <p>
+                  <i class="fas fa-home mr-3"></i> Stockholm, solna 169 97,
+                  Sweden
+                </p>
+                <p><i class="fas fa-envelope mr-3"></i> info@gmail.com</p>
+                <p><i class="fas fa-phone mr-3"></i> + 46 534 567 88</p>
               </div>
             </div>
-          <!-- Copyright -->
-          <div
-            class="text-center p-3"
-            style="background-color: #8efe8b"
-          >
-            © 2024 Copyright:
-            <a class="text-dark" href="{% url 'home' %}"
-              >Lithium Battery Recycle Blog</a
-            >
           </div>
-        </footer>
-      </section>
+        <!-- Copyright -->
+        <div
+          class="text-center p-3"
+          style="background-color: #8efe8b"
+        >
+          © 2024 Copyright:
+          <a class="text-dark" href="{% url 'home' %}"
+            >Lithium Battery Recycle Blog</a
+          >
+        </div>
+      </footer>
     </div>
 
     <script src="{% static 'js/script.js' %}"></script>
