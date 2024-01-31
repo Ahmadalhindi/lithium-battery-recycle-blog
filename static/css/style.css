@@ -19,7 +19,7 @@ P {
     font-family: 'Playfair Display', serif;
 }
 
-/* post-detail */
+/* post-detail template*/
 /* Categories buttons */
 .center-anchor {
     text-align: center;
@@ -97,7 +97,16 @@ P {
     border: none;
 }
 
-/* Custom for pagination in post-list */
+.fa-solid {
+    color: #28aa53;
+}
+
+/* post-list template */
+.btn > .fa-solid {
+    color: white;
+}
+
+/* Custom for pagination */
 .page-link-custom {
     color: #28aa53;
     text-decoration: none;
@@ -114,7 +123,7 @@ P {
     text-decoration: none;
 }
 
-/*  post-list and post-detail */
+/*  post-list and post-detail templates */
 .card-text {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -137,3 +146,4 @@ P {
 .me-5 > span {
     font-size: 1.5rem;
 }
+
