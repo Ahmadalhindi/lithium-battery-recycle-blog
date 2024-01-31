@@ -1,7 +1,7 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
-from .models import Category, Post
+from .models import Category, Post, Comment
 from .forms import CommentForm
 
 
@@ -87,6 +87,7 @@ class PostDetail(generic.View):
                 "category": category,
                 "post": post,
                 "comments": comments,
+                "commented": False,
                 "liked": liked,
                 "comment_form": CommentForm(),
             },
@@ -108,10 +109,21 @@ class PostDetail(generic.View):
         category = post.category
         comments = post.comments.filter(approved=True).order_by("created_at")
         liked = False
+        
         if post.likes.filter(id=self.request.user.id).exists():
             liked = True
 
         comment_form = CommentForm(data=request.POST)
+
+        if 'delete_comment_id' in request.POST:
+            comment_id_to_delete = request.POST['delete_comment_id']
+            try:
+                comment_to_delete = Comment.objects.get(id=comment_id_to_delete)
+                comment_to_delete.delete()
+            except Comment.DoesNotExist:
+                # Handle the case where the comment with the provided ID doesn't exist
+                pass
+
         if comment_form.is_valid():
             comment_form.instance.email = request.user.email
             comment_form.instance.name = request.user.username
