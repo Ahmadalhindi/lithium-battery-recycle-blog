@@ -121,7 +121,6 @@ class PostDetail(generic.View):
                 comment_to_delete = Comment.objects.get(id=comment_id_to_delete)
                 comment_to_delete.delete()
             except Comment.DoesNotExist:
-                # Handle the case where the comment with the provided ID doesn't exist
                 pass
 
         if comment_form.is_valid():

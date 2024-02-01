@@ -4,7 +4,7 @@ h3, h4, .me-5 > span {
     font-style: italic;
 }
 
-h5 {
+h2, h5 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 500;
 }
@@ -147,3 +147,10 @@ P {
     font-size: 1.5rem;
 }
 
+#contact {
+    margin-top: 30px;
+}
+
+.text-center {
+    margin-bottom: 25px;
+}
