@@ -14,6 +14,10 @@ P {
     font-weight: 400;
 }
 
+img {
+    width: 100%;
+}
+
 /* navigation bar */
 .nav-link {
     font-family: 'Playfair Display', serif;
@@ -149,8 +153,4 @@ P {
 
 #contact {
     margin-top: 30px;
-}
-
-.text-center {
-    margin-bottom: 25px;
 }

@@ -3,14 +3,12 @@
 <div class="masthead">
   <div class="container">
     <div class="row g-0">
-      <div class="col-md-12 center-anchor col-custom mb-3">
         <!-- Back tab to category list -->
-        <tab>
-          <a href="{% url 'post_list_by_category' category_name=category.name %}" class="btn btn-success"
-            >Back to Category list</a
-          >
-        </tab>
-      </div>
+      <tab class="col-md-12 center-anchor col-custom mb-3">
+        <a href="{% url 'post_list_by_category' category_name=category.name %}" class="btn btn-success"
+          >Back to Category list</a
+        >
+      </tab>
       <div class="col-md-6 masthead-text">
         <!-- post title -->
         <h1 class="post-title">{{ post.title }}</h1>
@@ -26,7 +24,7 @@
           width="100%"
         >
         {% else %}
-        <img src=" {{ post.featured_image.url }}" alt="card-image-blog-default" width="100%">
+        <img src=" {{ post.featured_image.url }}" alt="card-image-blog-default">
         {% endif %}
       </div>
     </div>
@@ -90,21 +88,14 @@
             {% endwith %}
           </div>
         </div>
-        <div class="col-md-12 center-anchor col-custom mb-3">
-          <!-- Back tab to category list -->
-          <tab>
-            <a href="{% url 'post_list_by_category' category_name=category.name %}" class="btn btn-success"
-              >Back to Category list</a
-            >
-          </tab>
-        </div>
       </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <hr>
-    </div>
+    <!-- Back tab to category list -->
+    <tab class="col-md-12 center-anchor col-custom mb-3">
+      <a href="{% url 'post_list_by_category' category_name=category.name %}" class="btn btn-success"
+        >Back to Category list</a
+      >
+    </tab>
   </div>
   <div class="row">
     <div class="col-md-8 card mb-4 mt-3">
