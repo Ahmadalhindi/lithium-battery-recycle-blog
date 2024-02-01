@@ -7,7 +7,8 @@ class CommentForm(forms.ModelForm):
     A form for handling comments.
 
     This form is used to create and update Comment objects in the database.
-    It extends the ModelForm class and specifies the model and fields to be used.
+    It extends the ModelForm class and specifies the model and fields
+    to be used.
 
     Attributes:
         model (Comment): The model associated with this form.

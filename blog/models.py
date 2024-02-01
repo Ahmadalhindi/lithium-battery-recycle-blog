@@ -33,7 +33,8 @@ class Post(models.Model):
         title (str): The title of the post.
         slug (str): A unique slug for the post's URL.
         author (User): The author of the post (ForeignKey to User model).
-        category (Category): The category to which the post belongs (ForeignKey to Category model).
+        category (Category): The category to which the post belongs (ForeignKey
+        to Category model).
         content (str): The main content of the post.
         featured_image (CloudinaryField): The featured image of the post.
         likes (QuerySet): The users who liked the post.
@@ -43,7 +44,8 @@ class Post(models.Model):
         excerpt (str): A short excerpt from the post.
 
     Meta:
-        ordering (List[str]): The default ordering for the posts based on the creation timestamp.
+        ordering (List[str]): The default ordering for the posts
+        based on the creation timestamp.
 
     Methods:
         __str__: Returns a string representation of the post.
@@ -86,7 +88,8 @@ class Comment(models.Model):
     Represents a comment on a blog post.
 
     Attributes:
-        post (Post): The post to which the comment belongs (ForeignKey to Post model).
+        post (Post): The post to which the comment belongs (ForeignKey
+        to Post model).
         name (str): The name of the commenter.
         email (str): The email of the commenter.
         body (str): The content of the comment.
@@ -94,7 +97,8 @@ class Comment(models.Model):
         approved (bool): Indicates whether the comment is approved or not.
 
     Meta:
-        ordering (List[str]): The default ordering for the comments based on the creation timestamp.
+        ordering (List[str]): The default ordering for the comments
+        based on the creation timestamp.
 
     Methods:
         __str__: Returns a string representation of the comment.
@@ -114,6 +118,7 @@ class Comment(models.Model):
 
     def __str__(self):
         """
-        Returns a string representation of the comment, including the post title and commenter's name.
+        Returns a string representation of the comment,
+        including the post title and commenter's name.
         """
         return f"commented on {self.post.title} by {self.name}"

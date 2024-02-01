@@ -17,14 +17,21 @@ class CategoryAdmin(admin.ModelAdmin):
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
     """
-    Customizes admin interface for the Post model, using Summernote for the 'content' field.
+    Customizes admin interface for the Post model,
+    using Summernote for the 'content' field.
 
     Attributes:
-        list_display (tuple): Specifies the fields to be displayed in the change list.
-        search_fields (list): Enables search functionality for 'title' and 'content'.
-        prepopulated_fields (dict): Automatically fills the 'slug' field based on 'title'.
-        list_filter (tuple): Filters displayed posts based on 'status', 'category', and 'created_at'.
-        summernote_fields (tuple): Enables the Summernote WYSIWYG editor for the 'content' field.
+        list_display (tuple):
+        Specifies the fields to be displayed in the change list.
+        search_fields (list):
+        Enables search functionality for 'title' and 'content'.
+        prepopulated_fields (dict):
+        Automatically fills the 'slug' field based on 'title'.
+        list_filter (tuple):
+        Filters displayed posts based on 'status', 'category',
+        and 'created_at'.
+        summernote_fields (tuple):
+        Enables the Summernote WYSIWYG editor for the 'content' field.
     """
     list_display = ('title', 'slug', 'status', 'created_at')
     search_fields = ['title', 'content']
@@ -39,10 +46,14 @@ class CommentAdmin(admin.ModelAdmin):
     Customizes admin interface for the Comment model.
 
     Attributes:
-        list_display (tuple): Specifies the fields to be displayed in the change list.
-        list_filter (tuple): Filters displayed comments based on 'approved' and 'created_at'.
-        search_fields (tuple): Enables search functionality for 'name', 'email', and 'body'.
-        actions (list): Specifies the available custom actions, such as 'approve_comments'.
+        list_display (tuple):
+        Specifies the fields to be displayed in the change list.
+        list_filter (tuple):
+        Filters displayed comments based on 'approved' and 'created_at'.
+        search_fields (tuple):
+        Enables search functionality for 'name', 'email', and 'body'.
+        actions (list):
+        Specifies the available custom actions, such as 'approve_comments'.
     """
     list_display = ('name', 'body', 'post', 'created_at', 'approved')
     list_filter = ('approved', 'created_at')

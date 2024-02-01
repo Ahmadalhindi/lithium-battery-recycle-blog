@@ -16,8 +16,10 @@ class PostListView(generic.ListView):
         paginate_by (int): Number of posts per page for pagination.
 
     Methods:
-        get_queryset: Get the queryset of posts based on the category or all posts.
-        get_context_data: Get additional context data to be used in the template.
+        get_queryset: Get the queryset of posts based on
+        the category or all posts.
+        get_context_data: Get additional context data to
+        be used in the template.
     """
     model = Post
     queryset = Post.objects.filter(status=1).order_by("created_at")
@@ -26,9 +28,11 @@ class PostListView(generic.ListView):
 
     def get_queryset(self):
         """
-        Get the queryset for the post list view, optionally filtered by category.
+        Get the queryset for the post list view,
+        optionally filtered by category.
 
-        If category_name is provided in the URL kwargs, filter posts by the specified category.
+        If category_name is provided in the URL kwargs,
+        filter posts by the specified category.
         If not, return all posts.
 
         Returns:
@@ -42,7 +46,8 @@ class PostListView(generic.ListView):
 
     def get_context_data(self, **kwargs):
         """
-        Get additional context data for the post list view, including all categories
+        Get additional context data for the post list view,
+        including all categories
 
         Returns:
             dict: Additional context data.
@@ -54,7 +59,8 @@ class PostListView(generic.ListView):
 
 class PostDetail(generic.View):
     """
-    View for displaying the details of a single post, including comments and like status.
+    View for displaying the details of a single post,
+    including comments and like status.
 
     Methods:
         get: Handle GET requests for viewing a post.
@@ -92,10 +98,11 @@ class PostDetail(generic.View):
                 "comment_form": CommentForm(),
             },
         )
-    
+
     def post(self, request, slug, *args, **kwargs):
         """
-        Handles POST requests for post detail view, including comment submission.
+        Handles POST requests for post detail view,
+        including comment submission.
 
         Args:
             request: The HTTP request.
@@ -109,16 +116,16 @@ class PostDetail(generic.View):
         category = post.category
         comments = post.comments.filter(approved=True).order_by("created_at")
         liked = False
-        
+
         if post.likes.filter(id=self.request.user.id).exists():
             liked = True
 
         comment_form = CommentForm(data=request.POST)
 
         if 'delete_comment_id' in request.POST:
-            comment_id_to_delete = request.POST['delete_comment_id']
+            comment_id_delete = request.POST['delete_comment_id']
             try:
-                comment_to_delete = Comment.objects.get(id=comment_id_to_delete)
+                comment_to_delete = Comment.objects.get(id=comment_id_delete)
                 comment_to_delete.delete()
             except Comment.DoesNotExist:
                 pass
@@ -153,7 +160,7 @@ class PostLike(View):
     Methods:
         post: Handle POST requests for liking/unliking a post.
     """
-    
+
     def post(self, request, slug, *args, **kwargs):
         """
         Handle POST requests for liking/unliking a post.
@@ -163,7 +170,8 @@ class PostLike(View):
             slug (str): The slug of the post.
 
         Returns:
-            HttpResponseRedirect: Redirect to the post detail page after liking/unliking.
+            HttpResponseRedirect: Redirect to the post detail page
+            after liking/unliking.
         """
         post = get_object_or_404(Post, slug=slug)
         if post.likes.filter(id=request.user.id).exists():
