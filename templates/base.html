@@ -33,7 +33,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
     </script>
-    
   </head>
 
   <body>
@@ -101,7 +100,7 @@
       </div>
     </nav>
 
-    <!-- Alerts messages -->
+    <!-- Alert messages -->
     <div class="container">
       <div class="row">
         <div class="col-md-8 offset-md-2">
@@ -124,7 +123,7 @@
       </div>
     </div>
 
-    <!-- Background picture -->
+    <!-- Background image -->
     <div class="container">
       <div class="row">
         <div class="col-md-12 center-image">
@@ -137,37 +136,35 @@
       </div>
     </div>
 
-    <!-- Categories buttons -->
-    <div id="category">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 center-anchor col-custom">
-            <div class="mt-5">
-              {% for category in categories %}
-              <a
-                href="{% url 'post_list_by_category' category_name=category.name %}"
-                class="btn btn-success"
-                ><i
-                  class="fa-solid fa-battery-quarter fa-rotate-by fa-sm"
-                  style="--fa-rotate-angle: 20deg"
-                >
-                  Category
-                </i>
-                {{category.name}}</a
+    <!-- Categories list -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 center-anchor col-custom">
+          <div class="mt-5">
+            {% for category in categories %}
+            <a
+              href="{% url 'post_list_by_category' category_name=category.name %}"
+              class="btn btn-success"
+              ><i
+                class="fa-solid fa-battery-quarter fa-rotate-by fa-sm"
+                style="--fa-rotate-angle: 20deg"
               >
-              {% endfor %}
-            </div>
+                Category
+              </i>
+              {{category.name}}</a
+            >
+            {% endfor %}
           </div>
         </div>
       </div>
     </div>
 
     <!-- Post list -->
-    <main class="flex-shrink-0 main-bg">
+    <div class="flex-shrink-0 main-bg">
       {% block content %}
       <!-- Content Goes here -->
       {% endblock content %}
-    </main>
+    </div>
 
     <!-- Footer -->
     <div id="contact">
@@ -183,7 +180,7 @@
           <div class="me-5">
             <span>YOU CAN ALSO FIND US ON SOCIAL MEDIA</span>
           </div>
-          <div>
+          <div class="text-decoration">
             <a
               href="https://facebook.com/"
               target="_blank"
@@ -280,6 +277,7 @@
       src="https://kit.fontawesome.com/7927b734fe.js"
       crossorigin="anonymous"
     ></script>
+
   </body>
   
 </html>
