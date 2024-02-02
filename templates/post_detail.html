@@ -4,11 +4,19 @@
   <div class="container">
     <div class="row g-0">
         <!-- Back tab to category list -->
-      <tab class="col-md-12 center-anchor col-custom mb-3">
-        <a href="{% url 'post_list_by_category' category_name=category.name %}" class="btn btn-success"
-          >Back to Category list</a
+        <div class="text-center">
+          <a
+          href="{% url 'post_list' %}"
+          class="btn btn-success"
+          ><i
+          class="fa-solid fa-battery-quarter fa-rotate-by fa-xs"
+          style="--fa-rotate-angle: 10deg"
         >
-      </tab>
+          Categories
+        </i>
+          </a
+        >
+        </div>
       <div class="col-md-6 masthead-text">
         <!-- post title -->
         <h1 class="post-title">{{ post.title }}</h1>
@@ -91,11 +99,6 @@
       </div>
     </div>
     <!-- Back tab to category list -->
-    <tab class="col-md-12 center-anchor col-custom mb-3">
-      <a href="{% url 'post_list_by_category' category_name=category.name %}" class="btn btn-success"
-        >Back to Category list</a
-      >
-    </tab>
   </div>
   <div class="row">
     <div class="col-md-8 card mb-4 mt-3">
@@ -149,6 +152,14 @@
       </div>
     </div>
   </div>
+</div>
+<div class="text-center">
+  <a
+  href="{% url 'post_list_by_category' category_name=category.name %}"
+  class="btn btn-success"
+  >
+  Back to: {{category.name}} category</a
+>
 </div>
 
 {% endblock content %}

@@ -35,6 +35,10 @@ img {
     padding: 10px;
 }
 
+.text-center {
+    margin-bottom: 25px;
+}
+
 /* post-detail */
 .card-body {
     justify-content: center;
