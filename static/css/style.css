@@ -121,13 +121,13 @@ img {
     font-weight: bold;
 }
 
-.link {
+.link, p > a {
     color: #28aa53;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
-.link:hover {
-    font-weight: bolder;
+.link:hover, p > a:hover {
+    font-weight: bold;
     text-decoration: none;
 }
 
