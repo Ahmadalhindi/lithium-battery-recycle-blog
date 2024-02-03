@@ -22,7 +22,6 @@ class PostListView(generic.ListView):
         be used in the template.
     """
     model = Post
-    queryset = Post.objects.filter(status=1).order_by("created_at")
     template_name = 'post_list.html'
     paginate_by = 4
 
@@ -38,11 +37,12 @@ class PostListView(generic.ListView):
         Returns:
             QuerySet: Filtered queryset of posts.
         """
+        queryset = Post.objects.filter(status=1).order_by("created_at")
         category_name = self.kwargs.get('category_name', None)
         if category_name:
-            return Post.objects.filter(category__name=category_name)
+            return Post.objects.filter(category__name=category_name).filter(status=1).order_by("created_at")
         else:
-            return Post.objects.all()
+            return queryset
 
     def get_context_data(self, **kwargs):
         """
