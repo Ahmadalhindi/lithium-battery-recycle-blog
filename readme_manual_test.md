@@ -112,3 +112,41 @@ As a/an Registered User/Admin I want to be able to leave comments on blog posts 
 
 \
 &nbsp;
+[11](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/11) - Approve Comments:
+
+As an Admin I want to be able to approve or disapprove comments on blog post so that I can ensure the quality of conversation on the site.
+
+<p align="center">
+<img src="documentation/readme_images/userstory10_1.png" alt="Approve Comments">
+</p>
+
+<p align="center">
+<img src="documentation/readme_images/userstory11.png" alt="Approve Comments">
+</p>
+
+<p align="center">
+<img src="documentation/readme_images/userstory11_1.png" alt="Approve Comments">
+</p>
+
+\
+&nbsp;
+[12](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/12) - View comments:
+
+As a/an User/admin I want to be able to view comments on each post so that I can read the conversation.
+
+<p align="center">
+<img src="documentation/readme_images/userstory12.png" alt="View comments">
+</p>
+
+\
+&nbsp;
+[13](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/13) - View likes:
+
+As a/an User/Admin I want to be able to see how many likes in post so that I can know how important this post.
+
+<p align="center">
+<img src="documentation/readme_images/userstory13.png" alt="View likes">
+</p>
+
+\
+&nbsp;
