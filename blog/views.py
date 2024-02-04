@@ -13,11 +13,11 @@ class PostListView(generic.ListView):
         model (Post): The model to use for the queryset.
         queryset (QuerySet): The queryset of posts to be displayed.
         template_name (str): The name of the template to render.
-        paginate_by (int): Number of posts per page for pagination.
+        paginate_by (int): Number of posts to display per page.
 
     Methods:
-        get_queryset: Get the queryset of posts based on
-        the category or all posts.
+        get_queryset: Get the queryset of posts based on the category
+        or all posts, and filtered by statue and date created.
         get_context_data: Get additional context data to
         be used in the template.
     """
@@ -35,12 +35,12 @@ class PostListView(generic.ListView):
         If not, return all posts.
 
         Returns:
-            QuerySet: Filtered queryset of posts.
+            QuerySet: Filtered and ordered queryset of blog posts.
         """
         queryset = Post.objects.filter(status=1).order_by("created_at")
         category_name = self.kwargs.get('category_name', None)
         if category_name:
-            return Post.objects.filter(category__name=category_name).filter(status=1).order_by("created_at")
+            return Post.objects.filter(category__name=category_name, status=1).order_by("created_at")
         else:
             return queryset
 
