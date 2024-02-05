@@ -71,10 +71,11 @@ As a User I want to view a list of blog posts of each category in the same page 
 
 As a User I want to be able to click on a specific blog post so that I can access its complete content.
 
+Blog on the list view:
 <p align="center">
 <img src="documentation/readme_images/userstory7_3.png" alt="Read Full Blog Post">
 </p>
-
+The full blog page:
 <img src="documentation/readme_images/userstory7_4.png" alt="Read Full Blog Post">
 </p>
 
@@ -191,7 +192,7 @@ As a/an User/Admin I want to be able to see how many likes in post so that I can
 
 As a/an Registered User/Admin I want to be able to like or undo like for blog posts so that I can express my opinion on the content.
 
-Click on ike:
+Click on ike button:
 <p align="center">
 <img src="documentation/readme_images/userstory14_1.png" alt="Like/undo like Posts">
 </p>
