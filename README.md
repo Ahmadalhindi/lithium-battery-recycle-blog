@@ -1,4 +1,4 @@
-# Lithium Battery Recycle Blog
+#  <div align="center">Lithium Battery Recycle Blog </div>
 
 ## Introduction
 
@@ -33,6 +33,9 @@ ___
 3. Encourage the social and friendly activity between users.
 4. Nonprofit website.
 
+\
+&nbsp;
+
 # User Experience/UX
 
 ## Target Audience
@@ -48,7 +51,7 @@ ___
 ### User:
 
 | <div align="center">#</div> | <div align="center">Title</div> |  <div align="center">User/Registerd user/Admin</div> | <div align="center">Content</div> | <div align="center">Label</div> |
-| ------ | ------ | ------ | ------ | ------ |
+| :------: | :------: | :------: | ------ | :------: |
 | [2](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/2) | View categories | User/Registerd User/Admin | I want to be able to view all the categories as default so that I can fast choose one particular category. | <span style="color:red">Must have</span> |
 | [3](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/3) | List the Categories | User/Registerd User/Admin | I want to be able to view the categories on navigation bar as buttons so that I can freely click on each category without leaving the category navigation bar in the home page. | <span style="color:green">Nice to have</span> |
 | [4](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/4) | View List Blog Posts | User/Registerd User/Admin | I want to view a list of all blog posts as default on the homepage so that I can fast select one to read. | <span  style="color:red">Must have</span> |
@@ -67,3 +70,42 @@ ___
 | [17](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/16) | Search for blogs | User/Registerd User/Admin | Deleted - Issue not accomplish for lack of time | <span style="color:green">Nice to have</span> - Deleted |
 | [18](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/18) | Log in / Log out | Registerd User/Admin | I want to be able to log in and log out from my account so that I can interact with the blog and ensure the safety of my personal content when I log out. | <span style="color:red">Must have</span> |
 | [19](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/19) | Manage Categories | Admin | I want to be able to create, edit and delete categories so that I can organize and categorize posts effectively. | <span style="color:red">Must have</span> |
+
+\
+&nbsp;
+
+# Database Plan
+
+## Category Model:
+
+| <div align="center">Attribute</div> | <div align="center">Type</div> | <div align="center">Detail</div> | Key/Relation
+|:-------------:|:-------------:|--------------|------------|
+| name | str/char(100)    | The name of the category    | 
+
+## Post Model:
+| <div align="center">Attribute</div> | <div align="center">Type</div> | <div align="center">Detail</div> | <div align="center">Key/Relation</div>
+|-------------|-------------|--------------|------------|
+| title | str/char(200)    | The title of the post | 
+| slug | str/char(200)    | A unique slug for the post's URL | 
+| author | User | The author of the post | ForeignKey to User model
+| category | Category | The category to which the post belongs | ForeignKey to Category model
+| content | str/text   | The main content of the post | 
+| featured_image | CloudinaryField | The featured image of the post | 
+| likes | QuerySet | The users who liked the post | manytomany to User model |
+| created_at | datetime | The timestamp when the post was created | 
+| updated_at | datetime | The timestamp when the post was last updated | 
+| status | int | The status of the post (Draft or Published) | 
+| name | str/text | A short excerpt from the post | 
+
+## Comment Model:
+| <div align="center">Attribute</div> | <div align="center">Type</div> | <div align="center">Detail</div> | <div align="center">Key/Relation</div>
+|-------------|-------------|--------------|------------|
+| post | Post | The post to which the comment belongs | ForeignKey to Post model |
+| name | str/char(90)    | The name of the commenter | 
+| email | str/email | The email of the commenter |
+| body | str/text | The content of the comment |
+| created_at | datetime   | The timestamp when the comment was created | 
+| approved | bool | Indicates whether the comment is approved or not |
+
+\
+&nbsp;
