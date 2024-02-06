@@ -74,6 +74,12 @@ ___
 \
 &nbsp;
 
+# Entity-Relationship Diagram
+
+<p align="center">
+<img src="erd.png" alt="Entity-Relationship Diagram">
+</p>
+
 # Database Plan
 
 ## Category Model:
@@ -109,3 +115,12 @@ ___
 
 \
 &nbsp;
+
+# Wireframes
+<p align="center">
+<img src="documentation/Wireframes/wireframe_home.png" alt="Entity-Relationship Diagram">
+</p>
+
+<p align="center">
+<img src="documentation/Wireframes/wireframe_post.png" alt="Entity-Relationship Diagram">
+</p>
