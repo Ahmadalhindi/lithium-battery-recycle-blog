@@ -117,10 +117,47 @@ ___
 &nbsp;
 
 # Wireframes
+- Home page:
 <p align="center">
 <img src="documentation/Wireframes/wireframe_home.png" alt="Entity-Relationship Diagram">
 </p>
 
+- Post-detail page:
 <p align="center">
 <img src="documentation/Wireframes/wireframe_post.png" alt="Entity-Relationship Diagram">
 </p>
+
+## Fonts
+- Playfair Display: features a modernized version of past fonts that mimicked the styling of ink pens.
+  - (Italic, 500) Used for heading h3, h4 
+
+- Open Sans: focuses on neutrality and friendliness, one of the best choices for bloggers everywhere.
+  - (500) Used for heading h2, h5
+  - (400) Used for Paragraph
+
+## Responsive Screens
+Our website delivers a consistent and user-friendly experience across a wide range of devices, contributing to improved usability and accessibility.
+
+
+### Breakpoints
+- **Desktop**: 992px and above
+  - Navigation bar with visiblity for logo and all items and buttons
+  - Grid layout adjusts to accommodate larger screen sizes.
+- **Tablet**: 768px - 991px
+  - Navigation bar: logo remains visible but items and buttons may collapsing to a hamburger drop down menu.
+  - Blogs will be listed vertically.
+- **Mobile**: Below 768px
+  - Navigation bar: the Logo and the hamburger icon will vertically aligned.
+  - Content stacks vertically for easier scrolling on smaller screens.
+
+\
+&nbsp;
+
+
+# Test
+
+## Manual Test
+Click on provided link to visit the [manual test](readme_manual_test.md) page.
+
+## Responsive Screens
+Testing is conducted on various devices including desktops, laptops, tablets, and smartphones.
