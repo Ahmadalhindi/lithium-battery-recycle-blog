@@ -159,5 +159,48 @@ Our website delivers a consistent and user-friendly experience across a wide ran
 ## Manual Test
 Click on provided link to visit the [manual test](readme_manual_test.md) page.
 
-## Responsive Screens
+## Responsive Screens Test
 Testing is conducted on various devices including desktops, laptops, tablets, and smartphones.
+
+\
+&nbsp;
+
+# Features
+
+## All pages
+All pages of a website have a navigation bar, head image and footer. The purpose is to enhance user experience, improve navigation, and provide consistent branding and functionality across the entire site.
+
+### Navigation Bar
+Intuitive, efficient and located in top of all pages for helping users find the information they're looking for quickly and easily.
+
+<p align="center">
+<img src="documentation/readme_images/nav_bar.png" alt="nav_bar">
+</p>
+
+<p align="center">
+<img src="documentation/readme_images/nav_bar2.png" alt="nav_bar2">
+</p>
+
+- Logo: It is created as a brand image positioned at the left-hand side. Contains text that represent the name of the website and the letter "L" replaced by an icon to illustirate the recycling battery. Clicking on the logo directs users back to the homepage.
+
+
+- Menu Items:
+  - **Home Item**: Takes users back to the homepage.
+  - **Category Item**: Clicking on it to list all the buttons of categories.
+  - **Contact Item**: Leads to section that Offers contact information.
+
+- Call to Action Buttons:
+  - **Log in/Sign Up**: Smooth buttons positioned at the right-hand side. encouraging users to log in to existing accounts or sign up for new ones.
+
+### Head Image:
+A background image that cover the head under navigation bar to give a visual Appeal and Contextual Information to make a strong first impression,encourage visitors to explore further and show the purpose of the website.
+
+<p align="center">
+<img src="static/template_images/background.webp" alt="head_image">
+</p>
+
+### Footer
+Enhancing the accessibility and credibility of a website by providing important information to visitors.
+- **Social Media Bar**: Icons that allowing visitors to connect with the website on social media platforms.
+- **Conact and About Us**: Give more information about the website and how to get in touch with us. 
+- **Copyright**: This helps protect the intellectual property of the website owner. With link to the top of the page.
