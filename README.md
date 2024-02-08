@@ -168,7 +168,7 @@ Testing is conducted on various devices including desktops, laptops, tablets, an
 # Features
 
 ## All pages
-All pages of a website have a navigation bar, head image and footer. The purpose is to enhance user experience, improve navigation, and provide consistent branding and functionality across the entire site.
+All pages of a website have a navigation bar, hero section and footer. The purpose is to enhance user experience, improve navigation, and provide consistent branding and functionality across the entire site.
 
 ### Navigation Bar
 Intuitive, efficient and located in top of all pages for helping users find the information they're looking for quickly and easily.
@@ -177,9 +177,6 @@ Intuitive, efficient and located in top of all pages for helping users find the 
 <img src="documentation/readme_images/nav_bar.png" alt="nav_bar">
 </p>
 
-<p align="center">
-<img src="documentation/readme_images/nav_bar2.png" alt="nav_bar2">
-</p>
 
 - Logo: It is created as a brand image positioned at the left-hand side. Contains text that represent the name of the website and the letter "L" replaced by an icon to illustirate the recycling battery. Clicking on the logo directs users back to the homepage.
 
@@ -192,8 +189,8 @@ Intuitive, efficient and located in top of all pages for helping users find the 
 - Call to Action Buttons:
   - **Log in/Sign Up**: Smooth buttons positioned at the right-hand side. encouraging users to log in to existing accounts or sign up for new ones.
 
-### Head Image:
-A background image that cover the head under navigation bar to give a visual Appeal and Contextual Information to make a strong first impression,encourage visitors to explore further and show the purpose of the website.
+### Hero section:
+A captivating image under navigation bar to give a visual Appeal and Contextual Information that grab visitors' attention to make a strong first impression, encourage visitors to explore further and convey the website's main message or value proposition succinctly.
 
 <p align="center">
 <img src="static/template_images/background.webp" alt="head_image">
@@ -204,3 +201,35 @@ Enhancing the accessibility and credibility of a website by providing important 
 - **Social Media Bar**: Icons that allowing visitors to connect with the website on social media platforms.
 - **Conact and About Us**: Give more information about the website and how to get in touch with us. 
 - **Copyright**: This helps protect the intellectual property of the website owner. With link to the top of the page.
+
+## Homepage
+Our homepage is providing a snapshot of what the website offers and guiding users to explore further.
+It contains the header and the footer that mentioned above, beside:
+
+### Categories Section
+It serves as a user-friendly way for visitors to explore the diverse range of content offered by the blog, facilitating easy navigation and discovery of articles that match their interests.
+
+<p align="center">
+<img src="documentation/readme_images/userstory2.png" alt="View Categories">
+</p>
+
+- **Layout and Placement**: it is positioned prominently on the homepage under header and arranged horizontally across it's navigation bar, allowing users to easily see and access them for quick navigation. It also reached by clicking in the category item in the navigation bar.
+- **List all categories**: It displayed all automatically by default for easy access when openning the homepage for easy access.
+- **Open Corresponding Posts**: When a user clicks on a specific category button, it opens up a corresponding section of the blog on the same page, providing a seamless browsing experience.
+
+### Posts Section
+The blog list section on a homepage serves as a dynamic showcase of the website's brief blog content, inviting visitors to delve deeper into the site and engage with its offerings.
+<p align="center">
+<img src="documentation/readme_images/userstory5_3.png" alt="View List Blog Posts">
+</p>
+
+- **List all Blog Posts**: It displayed all automatically by default when openning the homepage for easy access.
+- **Pagination**: Diveded by 4 - Allowing visitors to easily navigate through multiple pages to view more blog posts.
+- Each blog post include:
+  - Thumbnail Image.
+  - Author name.
+  - Title.
+  - Brief Excerpt.
+  - Publication Date.
+  - Read More button: to access the full post
+.
