@@ -232,4 +232,62 @@ The blog list section on a homepage serves as a dynamic showcase of the website'
   - Brief Excerpt.
   - Publication Date.
   - Read More button: to access the full post
-.
+
+<p align="center">
+<img src="documentation/readme_images/userstory7_3.png" alt="Read Full Blog Post">
+</p>
+
+## Post Detail Page
+This page allows visitors to read the full blog post, and allows the registered users to interact with each other and with the admin by leave comments and likes.
+- **Blog full display section**
+  - Image
+  - Title
+  - Author
+  - Content
+
+<p align="center">
+<img src="documentation/readme_images/postdetail_image_title.png  " alt="postdetail_image_title">
+</p>
+
+- **Like button icon**: Allows visitors to see the number of likes, and let registered users to like/undo like posts.
+
+<p align="center">
+<img src="documentation/readme_images/postdetail_like.png" alt="postdetail_like">
+</p>
+
+
+- **Comment icon**: Allows visitors to see the number of comments.
+
+<p align="center">
+<img src="documentation/readme_images/postdetail_comment-icon.png" alt="postdetail_comment-icon">
+</p>
+
+- **Comment section**:
+For engage in discussions, share opinions, provide feedback, ask questions, or offer additional insights related to the blog content.
+
+ The below picture displayed for visitors:
+
+<p align="center">
+<img src="documentation/readme_images/postdetail_comment_visitors.png" alt="postdetail_comment_visitors">
+</p>
+
+ The below picture displayed for registered users:
+
+<p align="center">
+<img src="documentation/readme_images/postdetail_comment_registeredusers.png" alt="postdetail_comment_registeredusers">
+</p>
+
+ The below picture displayed for the admin:
+
+<p align="center">
+<img src="documentation/readme_images/postdetail_comment_admin.png" alt="postdetail_comment_admin">
+</p>
+
+  - Display comments section: Allow visitors to see all comments with name of commneters and dates of commenting. Also let the registered users to delete their comments by clicking on red button.
+  - Leave a comment section: Allows registered users to write a comment. But instead for visitor will display a welcoming message provided with a link to log in for leavivg a comment.
+
+    Hint: The comment will not appear in the display comment section until the admin approve it.See the picture below:
+
+<p align="center">
+<img src="documentation/readme_images/postdetail_comment_approval.png" alt="Approve Comments">
+</p>
