@@ -234,10 +234,10 @@ The blog list section on a homepage serves as a dynamic showcase of the website'
   - Read More button: to access the full post
 
 <p align="center">
-<img src="documentation/readme_images/userstory7_3.png" alt="Read Full Blog Post">
+<img src="documentation/readme_images/single_blog.png" alt="Read Full Blog Post">
 </p>
 
-## Post Detail Page
+## Post Detail 
 This page allows visitors to read the full blog post, and allows the registered users to interact with each other and with the admin by leave comments and likes.
 - **Blog full display section**
   - Image
@@ -284,10 +284,102 @@ For engage in discussions, share opinions, provide feedback, ask questions, or o
 </p>
 
   - Display comments section: Allow visitors to see all comments with name of commneters and dates of commenting. Also let the registered users to delete their comments by clicking on red button.
+
   - Leave a comment section: Allows registered users to write a comment. But instead for visitor will display a welcoming message provided with a link to log in for leavivg a comment.
 
     Hint: The comment will not appear in the display comment section until the admin approve it.See the picture below:
 
 <p align="center">
 <img src="documentation/readme_images/postdetail_comment_approval.png" alt="Approve Comments">
+</p>
+
+- **Back button to same cayegory**: Button will allow users to go back to the same category that belong to the post.
+
+<p align="center">
+<img src="documentation/readme_images/postdetail_back_button.png" alt="postdetail_back_button">
+</p>
+
+## Sign Up
+ Sign up Page considers as the entry point for new users to create accounts and access the platform's features like leave a comment, delete their own comment, or like a post.
+
+ <p align="center">
+<img src="documentation/readme_images/userstory15.png" alt="User Registration">
+</p>
+
+### Sign up Option
+Provide a link to Sign in if the user already registered.
+### Sign up Form
+- Username
+- Email (optional)
+- Password
+- Confirm Password
+
+### Sign up Button
+A button to submit the form.
+
+### Error Messages and Validation:
+If there are any errors in the sign-up form, such as missing fields, invalid input the page displays clear error messages indicating what went wrong and how the user can correct it.
+
+Below pictures refer such example error messages:
+
+<p align="center">
+<img src="documentation/readme_images/signup_validation_username.png" alt="signup_validation_username">
+</p>
+
+<p align="center">
+<img src="documentation/readme_images/signup_validation_password.png" alt="signup_validation_password">
+</p>
+
+### Confirmation Message:
+After successfully signing up, a confirmation message be displayed to inform users that they have been registered.
+
+This message will auto close with timeout after 2 seconds.
+
+## Sign In 
+This page will allow users to access their accounts or create new ones to interact with the site's content, such leave a comment or like a post.
+
+<p align="center">
+<img src="documentation/readme_images/signin.png" alt="signin">
+</p>
+
+### Sign in Option
+Provide a link to Sign up if the user not registered yet.
+
+### Sign in Form
+- Username
+- Password
+- "Remember Me" Option
+
+### Error Messages and Validation:
+If there are any errors in the sign in form, such as missing fields, invalid input or incorrect the page displays clear error messages indicating what went wrong and how the user can correct it.
+
+Below picture refers example error message:
+
+<p align="center">
+<img src="documentation/readme_images/signin_validation.png" alt="signin_validation">
+</p>
+
+### Confirmation Message
+After successfully signing in, a confirmation message displayed to inform users that they have been logged in.
+
+This message will auto close with timeout after 2 seconds.
+
+<p align="center">
+<img src="documentation/readme_images/userstory18_1.png" alt="Log in/Log out">
+</p>
+
+## Sign Out
+Sign out Page considers as the endpoint for registered users who wish to log out of their accounts.
+
+<p align="center">
+<img src="documentation/readme_images/userstory18_2.png" alt="Log in/Log out">
+</p>
+
+- **Log out Button**: located in the navigation bar at the homepage.
+- **Confirmation Page**: A new page displaying confirmation message asking logged in user if they want to log out by clicking the red button.
+- **Confirmation Message**: After successfully signing out, a confirmation message displayed to inform logged in users that they have been logged out.
+This message will auto close with timeout after 2 seconds.
+
+<p align="center">
+<img src="documentation/readme_images/userstory18_3.png" alt="Log in/Log out">
 </p>
