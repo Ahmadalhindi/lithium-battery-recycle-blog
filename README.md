@@ -383,3 +383,43 @@ This message will auto close with timeout after 2 seconds.
 <p align="center">
 <img src="documentation/readme_images/userstory18_3.png" alt="Log in/Log out">
 </p>
+
+\
+&nbsp;
+
+# Technologies Used
+
+## Languages
+- [HTML5](https://en.wikipedia.org/wiki/HTML "HTML")
+- [CSS3](https://en.wikipedia.org/wiki/CSS "CSS")
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript "JavaScript")
+- [Python]( https://en.wikipedia.org/wiki/Python_(programming_language) "Python") 
+## Frameworks 
+- [Django3.2.23](https://www.djangoproject.com/ "Django")
+- [Bootstrap5](https://getbootstrap.com/ "Bootstrap")
+
+## Libraries and Tools
+- [cloudinary](https://cloudinary.com/ "cloudinary") - Used to store website's images.
+- [elephandSQL](https://www.elephantsql.com/) Used to store and manage PostgreSQL database.
+- [gitpod](https://www.gitpod.io/ "gitpod") – Used as the development to build the page.
+- [gitHub](https://github.com/ "gitHub") – The project’s Version Control Management System.
+- [google fonts](https://fonts.google.com/ "google Fonts") – For fonts used in the site.
+- [psycopg2](https://pypi.org/project/psycopg2/ "google Fonts") – Is the popular PostgreSQL adapter used in  Python.
+- [gunicorn](https://gunicorn.org/ "gunicorn") Allows to run multiple Python processes within a single dyno
+- [crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/ "crispy-forms") – Control the rendering behavior of Django forms.
+- [django-extensions](https://pypi.org/project/django-extensions/ "django-extensions") - Add functionality to the project.
+- [django-allauth](https://docs.allauth.org/en/latest/ "django-allauth") Addressing authentication, registration, account management as well as 3rd party (social) account authentication.
+- [django-summernote](https://github.com/summernote/django-summernote/blob/main/README.md "django-summernote") Support admin mixins and widgets.
+- [graphviz](https://graphviz.org/ "Graphviz") Set of tools for visualizing graph data, ERD in our project.
+- [pyparsing](https://pypi.org/project/pyparsing/ "pyparsing") Library for parsing text strings.
+- [pydot](https://pypi.org/project/pydot/ "pydot") Library for creating, manipulating, and visualizing graphs in DOT format.
+- [looka](https://looka.com/ "lookas") – Create and design the logo.
+- [font awesome](https://looka.com/ "font awesome") – A robust icon set that contains scalable vector icons.
+- [Heroku](https://id.heroku.com/ "Heroku") Used to deploy the project.
+
+## Validation and Auto-test Websites
+- [w3c HTML Validation Service](https://validator.w3.org/ "W3C HTML") – To validate HTML files.
+- [jigsaw-w3 CSS Validation Service](https://jigsaw.w3.org/css-validator/ "W3C CSS") – To validate the CSS files.
+- [jSHint](https://jshint.com/ "JSHint") – To validate JavaScript files.
+- [python Syntax Checker PEP8](https://www.pythonchecker.com/ "Python Syntax Checker PEP8") – To validate all the Python files, making sure they align with PEP8.
+- [lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en "Lighthouse") – To check the website’s performance and accessibility. Improving the quality of web pages.
