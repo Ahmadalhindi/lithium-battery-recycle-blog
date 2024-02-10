@@ -10,7 +10,7 @@ The live to website: [Lithium Battery Recycle Blog website](https://lithium2023-
 The link to GitHub Repository: [GitHub Repository](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog)
 
 <p align="center">
-<img src="documentation/readme_images/.png" alt="amiresponsives">
+<img src="documentation/readme_images/amiresponsive.png" alt="amiresponsives">
 </p>
 
 ___
@@ -136,7 +136,7 @@ ___
   - (400) Used for Paragraph
 
 ## Responsive Screens
-Our website delivers a consistent and user-friendly experience across a wide range of devices, contributing to improved usability and accessibility.
+The website deliver a consistent and user-friendly experience across a wide range of devices, contributing to improved usability and accessibility.
 
 
 ### Breakpoints
@@ -149,18 +149,6 @@ Our website delivers a consistent and user-friendly experience across a wide ran
 - **Mobile**: Below 768px
   - Navigation bar: the Logo and the hamburger icon will vertically aligned.
   - Content stacks vertically for easier scrolling on smaller screens.
-
-\
-&nbsp;
-
-
-# Test
-
-## Manual Test
-Click on provided link to visit the [manual test](readme_manual_test.md) page.
-
-## Responsive Screens Test
-Testing is conducted on various devices including desktops, laptops, tablets, and smartphones.
 
 \
 &nbsp;
@@ -423,3 +411,66 @@ This message will auto close with timeout after 2 seconds.
 - [jSHint](https://jshint.com/ "JSHint") – To validate JavaScript files.
 - [python Syntax Checker PEP8](https://www.pythonchecker.com/ "Python Syntax Checker PEP8") – To validate all the Python files, making sure they align with PEP8.
 - [lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en "Lighthouse") – To check the website’s performance and accessibility. Improving the quality of web pages.
+
+\
+&nbsp;
+
+# Test
+
+## Manual Test
+Click on provided link to visit the [manual test](readme_manual_test.md) page.
+
+## Responsive Screens Test
+Testing is conducted on various devices including desktops, laptops, tablets, and smartphones.
+
+## Code Validation
+
+### W3C Markup HTML Validator
+Tested for homepage by W3c HTML Markup validation service and passed.
+
+<p align="center">
+<img src="documentation/readme_images/html-validation.png" alt="html-validation">
+</p>
+
+And tested for all other pages and passed, except one error in the post_detail template is not fixed, the element "p end tag" located inside the root of Django.
+
+<p align="center">
+<img src="documentation/readme_images/html-validation-error.png" alt="html-validation-error">
+</p>
+
+### Jigsaw W3 CSS Validator
+CSS tested by Jigsaw W3 CSS Validaton service and passed with no errors.
+
+<p align="center">
+<img src="documentation/readme_images/css-validation.png" alt="css-validator">
+</p>
+
+But found 8 warnings about vendor extension, that no harm if not fix it.
+
+### JS Hint
+Tested JavaScript code with only two warnings.
+
+<p align="center">
+<img src="documentation/readme_images/jshint_validator.png" alt="jshint_validator">
+</p>
+
+Tested again after fix it, and passed with no more warnings.
+
+<p align="center">
+<img src="documentation/readme_images/jshint_warnings.png" alt="jshint_warnings">
+</p>
+
+### PEP8 CI Python checker
+All python files tested with no errors, exept for one error in views for long line:
+
+<p align="center">
+<img src="documentation/readme_images/pep8ci.png" alt="PEP8 CI Python checker">
+</p>
+
+### Lighthouse
+
+The website performed well when it came to the lighthouse test.
+
+<p align="center">
+<img src="documentation/readme_images/lighthouse.png" alt="lighthouse">
+</p>
