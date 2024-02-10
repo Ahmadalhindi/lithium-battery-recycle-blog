@@ -426,7 +426,7 @@ Testing is conducted on various devices including desktops, laptops, tablets, an
 ## Code Validation
 
 ### W3C Markup HTML Validator
-Tested for homepage by W3c HTML Markup validation service and passed.
+Tested for homepage by W3c HTML Markup validation service and fixed the trailing slash and subtree errors. Then passed with noe more errors.
 
 <p align="center">
 <img src="documentation/readme_images/html-validation.png" alt="html-validation">
@@ -474,3 +474,27 @@ The website performed well when it came to the lighthouse test.
 <p align="center">
 <img src="documentation/readme_images/lighthouse.png" alt="lighthouse">
 </p>
+
+\
+&nbsp;
+
+# Bugs
+
+## Fixed Bugs
+- **The draft post keep displaying in the site**:
+
+  To prevent draft posts from appearing in the site:
+  
+  views.py - in PostListView class by replace the queryset variable at get_queryset function and return it to get all posts or posts with specified category that filtered by statue as published and date created.
+
+- **ModuleNotFoundError: No module named 'django_extensions'**
+
+  Debug it by add the module to requirements file.
+
+- **favicon.ico not found when deploying to Heroku**
+
+  Debug it by created blank favicon.ico in static folder.
+
+## Unfixed Bugs
+- The posts not sorted by date created.
+- Uncaught (in promise) Error: A listener indicated an asynchronous response by returning true, but the message channel closed before a response was received
