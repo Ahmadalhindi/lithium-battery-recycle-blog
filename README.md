@@ -1,36 +1,46 @@
 #  <div align="center">Lithium Battery Recycle Blog </div>
 
+\
+&nbsp;
+
+<p align="center">
+<img src="static/template_images/logo.webp" alt="Lithium Battery Recycle Blog">
+</p>
+
+\
+&nbsp;
 ## Introduction
 
 Welcome to my repository that represnted Lithium Battery Recycle Blog website.
 It is a blog website to share knowledge and increase learning about recycling lithium-ion battery.
 
-The live to website: [Lithium Battery Recycle Blog website](https://lithium2023-734017e000a2.herokuapp.com/)
-
-The link to GitHub Repository: [GitHub Repository](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog)
-
 <p align="center">
 <img src="documentation/readme_images/amiresponsive.png" alt="amiresponsives">
 </p>
 
-___
+The live to website: [Lithium Battery Recycle Blog website](https://lithium2023-734017e000a2.herokuapp.com/)
 
+The link to GitHub Repository: [GitHub Repository](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog)
 
-## CONTENTS
+\
+&nbsp;
+
+## Contents
 
 - [Introduction](#introduction)
-    - [My Adventures in Northern Sweden](#my-adventures-in-northern-sweden)
+    - [dsdd](#my-adventures-in-northern-sweden)
   - [Site Objectives](#site-objectives)
 - [User Experience/UX](#user-experienceux)
   - [Target Audience](#target-audience)
   - [User Stories](#user-stories)
 
-___
+\
+&nbsp;
 
 ## Site Objectives
 1. Share knowledge and increase learning about recycling lithium-ion battery.
 2. Achieve the SDGs and sustainbility goals for the better green environment.
-3. Encourage the social and friendly activity between users.
+3. Encourage the social and friendly interactions between users.
 4. Nonprofit website.
 
 \
@@ -489,12 +499,56 @@ The website performed well when it came to the lighthouse test.
 
 - **ModuleNotFoundError: No module named 'django_extensions'**
 
-  Debug it by add the module to requirements file.
+  Debug it by adding the module to requirements.txt file.
 
 - **favicon.ico not found when deploying to Heroku**
 
-  Debug it by created blank favicon.ico in static folder.
+  Debug it by creating a blank favicon.ico file in static folder.
 
 ## Unfixed Bugs
 - The posts not sorted by date created.
 - Uncaught (in promise) Error: A listener indicated an asynchronous response by returning true, but the message channel closed before a response was received
+
+\
+&nbsp;
+
+# Deployment
+
+## Create Heroku Application
+
+-  Log in to Heroku account.
+- Create new application by click on **new** button then select **Create new app**.
+- Write application name then select the region then click on **Create App**.
+
+## ElephantSQL & Cloudinary
+- Log in to ElephantSQL.
+- Make a new instance.
+- Copy the URL to use it for the further step.
+
+## Create Django Blank project and app with environment
+- Install django gunicorn and its libraries psycopg2 and cloudinary-storage.
+- Add those libraries to requirements.txt
+- Create the project name.
+- Create the app name, then add it to settings.py
+- Migrate the changes and push it.
+- Write application name then select the region then click on **Create App**.
+- add the DATABASE_URL, SECRET_KEY & CLOUDINARY_URL to the settings.py file
+- Add the values of SECRET_KEY, DATABASE_URL and CLOUDINARY_URL keys at env.py and setting files.
+- Create import os statement for the env.py 
+- Add Heroku ALLOWED_HOSTS with localhost in settings.py
+- Created the Procfile and integrate it with the project.
+- Make add, commit and Push the changes to Github.
+
+## Heroku Deployment
+- log in again and select the heroku app you created.
+- Settings tab, then at Config Vars add those:
+  - key: PORT | value: 8000
+  - key: SECRET_KEY | value: Django Secret Key from settings.py
+  - key: CLOUDINARY_URL | value: Cloudinary API URL
+  - key: DATABASE_URL | value: ElephantSQL database URL
+-  Deploy tab to connect up with github account
+- connect up to the repository.
+- Click on deploy button.
+
+Well done to deploy your application!
+
