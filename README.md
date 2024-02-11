@@ -12,7 +12,7 @@
 ## Introduction
 
 Welcome to my repository that represnted Lithium Battery Recycle Blog website.
-It is a blog website to share knowledge and increase learning about recycling lithium-ion battery.
+It is a blog website to share knowledge and increase learning about recycling lithium-ion batteries.
 
 <p align="center">
 <img src="documentation/readme_images/amiresponsive.png" alt="amiresponsives">
@@ -28,19 +28,30 @@ The link to GitHub Repository: [GitHub Repository](https://github.com/Ahmadalhin
 ## Contents
 
 - [Introduction](#introduction)
-    - [dsdd](#my-adventures-in-northern-sweden)
-  - [Site Objectives](#site-objectives)
+- [Site Objectives](#site-objectives)
 - [User Experience/UX](#user-experienceux)
   - [Target Audience](#target-audience)
   - [User Stories](#user-stories)
+- [Entity-Relationship Diagram](#Entity-Relationship-Diagram)
+- [Database Plan](#Database-Plan)
+- [Structure](#Structure)
+  - [Wireframes](##Wireframes)
+  - [Fonts](##Fonts)
+  - [Responsive Screens](##Responsive-Screens)
+- [Features](#Features)
+- [All pages](##All-pages)
+- [Homepage](##Homepage)
+- [Post Detail](##Post-Detail)
+- [Wireframes](#Wireframes)
+- [Wireframes](#Wireframes)
 
 \
 &nbsp;
 
 ## Site Objectives
-1. Share knowledge and increase learning about recycling lithium-ion battery.
-2. Achieve the SDGs and sustainbility goals for the better green environment.
-3. Encourage the social and friendly interactions between users.
+1. Share knowledge and increase learning about recycling lithium-ion batteries.
+2. Achieve the SDGs and sustainability goals for a better green environment.
+3. Encourage social and friendly interactions between users.
 4. Nonprofit website.
 
 \
@@ -50,35 +61,34 @@ The link to GitHub Repository: [GitHub Repository](https://github.com/Ahmadalhin
 
 ## Target Audience
 
-- Users that are interested of gain more knowledge about recycle lithium-ion battery.
+- Users that are interested in gaining more knowledge about recycling lithium-ion batteries.
 - Users that own electric vehicle / EV based on lithium-ion battery.
 - Environmentalists who stand up for the environment and renewable energy.
-- Investors who intersted to buy stocks from lithium battery recycle forms.
-- People who can't afford to pay for membership in the website.
+- Investors who are interested in buying stocks from lithium battery recycle forms.
+- People who can't afford to pay for membership on the website.
 
 ## User Stories
 
-### User:
 
-| <div align="center">#</div> | <div align="center">Title</div> |  <div align="center">User/Registerd user/Admin</div> | <div align="center">Content</div> | <div align="center">Label</div> |
+| <div align="center">#</div> | <div align="center">Title</div> |  <div align="center">User/Registered user/Admin</div> | <div align="center">Content</div> | <div align="center">Label</div> |
 | :------: | :------: | :------: | ------ | :------: |
-| [2](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/2) | View categories | User/Registerd User/Admin | I want to be able to view all the categories as default so that I can fast choose one particular category. | <span style="color:red">Must have</span> |
-| [3](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/3) | List the Categories | User/Registerd User/Admin | I want to be able to view the categories on navigation bar as buttons so that I can freely click on each category without leaving the category navigation bar in the home page. | <span style="color:green">Nice to have</span> |
-| [4](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/4) | View List Blog Posts | User/Registerd User/Admin | I want to view a list of all blog posts as default on the homepage so that I can fast select one to read. | <span  style="color:red">Must have</span> |
-| [5](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/5) | Site pagination | User/Registerd User/Admin | I want to view a paginated list of posts so that easily select post to view. | <span style="color:green">Nice to have</span>  |
-| [6](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/6) | View posts of each category in the same page | User/Registerd User/Admin | I want to view a list of blog posts of each category in the same page so that I can easily click on category links and see the corresponding blog posts in the same page. | <span style="color:green">Nice to have</span> |
-| [7](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/7) | Read Full Blog Post | User/Registerd User/Admin | I want to be able to click on a specific blog post so that I can access its complete content. | <span style="color:red">Must have</span> |
+| [2](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/2) | View categories | User/Registered User/Admin | I want to be able to view all the categories as default so that I can fast choose one particular category. | <span style="color:red">Must have</span> |
+| [3](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/3) | List the Categories | User/Registered User/Admin | I want to be able to view the categories on navigation bar as buttons so that I can freely click on each category without leaving the category navigation bar in the home page. | <span style="color:green">Nice to have</span> |
+| [4](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/4) | View List Blog Posts | User/Registered User/Admin | I want to view a list of all blog posts as default on the homepage so that I can fast select one to read. | <span  style="color:red">Must have</span> |
+| [5](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/5) | Site pagination | User/Registered User/Admin | I want to view a paginated list of posts so that easily select post to view. | <span style="color:green">Nice to have</span>  |
+| [6](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/6) | View posts of each category in the same page | User/Registered User/Admin | I want to view a list of blog posts of each category in the same page so that I can easily click on category links and see the corresponding blog posts in the same page. | <span style="color:green">Nice to have</span> |
+| [7](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/7) | Read Full Blog Post | User/Registered User/Admin | I want to be able to click on a specific blog post so that I can access its complete content. | <span style="color:red">Must have</span> |
 | [8](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/8) | Manage blog posts | Admin | I want to be able to create, read, update and delete posts so that I can manage my posts if necessary. | <span style="color:red">Must have</span> |
 | [9](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/9) | Create draft posts | Admin | I want to be able to create draft posts so that I can freely complete writing the drafts the time I want. | <span style="color:yellow">Should have</span> |
-| [10](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/10) | Comment on Blog Posts | Registerd User/Admin | I want to be able to leave comments on blog posts so that I can engage on the post and share my thoughts. | <span style="color:red">Must have</span> |
+| [10](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/10) | Comment on Blog Posts | Registered User/Admin | I want to be able to leave comments on blog posts so that I can engage on the post and share my thoughts. | <span style="color:red">Must have</span> |
 | [11](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/11) | Approve Comments | Admin | I want to be able to approve or disapprove comments on blog post so that I can ensure the quality of conversation on the site. | <span style="color:yellow">Should have</span> |
-| [12](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/12) | View comments | User/Registerd User/Admin | I want to be able to view comments on each post so that I can read the conversation. | <span style="color:red">Must have</span> |
-| [13](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/13) | View likes | User/Registerd User/Admin | I want to be able to see how many likes in post so that I can know how important this post. | <span style="color:red">Must have</span> |
-| [14](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/14) | Like/undo like Posts | Registerd User/Admin | I want to be able to like or Like/undo like for blog posts so that I can express my opinion on the content. | <span style="color:red">Must have</span> |
+| [12](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/12) | View comments | User/Registered User/Admin | I want to be able to view comments on each post so that I can read the conversation. | <span style="color:red">Must have</span> |
+| [13](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/13) | View likes | User/Registered User/Admin | I want to be able to see how many likes in post so that I can know how important this post. | <span style="color:red">Must have</span> |
+| [14](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/14) | Like/undo like Posts | Registered User/Admin | I want to be able to like or Like/undo like for blog posts so that I can express my opinion on the content. | <span style="color:red">Must have</span> |
 | [15](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/15) | User Registration | User | I want to be able to sign up for a new account with a unique username and password so that I can comment and like. | <span style="color:red">Must have</span> |
-| [16](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/16) | Responsive Design | User/Registerd User/Admin | I want the blog site to be responsive as accessing from different devices so that I can easily surf and navigate the site on various screen sizes. | <span style="color:red">Must have</span> |
-| [17](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/16) | Search for blogs | User/Registerd User/Admin | Deleted - Issue not accomplish for lack of time | <span style="color:green">Nice to have</span> - Deleted |
-| [18](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/18) | Log in / Log out | Registerd User/Admin | I want to be able to log in and log out from my account so that I can interact with the blog and ensure the safety of my personal content when I log out. | <span style="color:red">Must have</span> |
+| [16](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/16) | Responsive Design | User/Registered User/Admin | I want the blog site to be responsive as accessing from different devices so that I can easily surf and navigate the site on various screen sizes. | <span style="color:red">Must have</span> |
+| [17](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/16) | Search for blogs | User/Registered User/Admin | Deleted - Issue not accomplish for lack of time | <span style="color:green">Nice to have</span> - Deleted |
+| [18](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/18) | Log in / Log out | Registered User/Admin | I want to be able to log in and log out from my account so that I can interact with the blog and ensure the safety of my personal content when I log out. | <span style="color:red">Must have</span> |
 | [19](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/19) | Manage Categories | Admin | I want to be able to create, edit and delete categories so that I can organize and categorize posts effectively. | <span style="color:red">Must have</span> |
 
 \
@@ -126,7 +136,8 @@ The link to GitHub Repository: [GitHub Repository](https://github.com/Ahmadalhin
 \
 &nbsp;
 
-# Wireframes
+# Structure
+## Wireframes
 - Home page:
 <p align="center">
 <img src="documentation/Wireframes/wireframe_home.png" alt="Entity-Relationship Diagram">
@@ -146,18 +157,18 @@ The link to GitHub Repository: [GitHub Repository](https://github.com/Ahmadalhin
   - (400) Used for Paragraph
 
 ## Responsive Screens
-The website deliver a consistent and user-friendly experience across a wide range of devices, contributing to improved usability and accessibility.
+The website delivers a consistent and user-friendly experience across a wide range of devices, contributing to improved usability and accessibility.
 
 
 ### Breakpoints
 - **Desktop**: 992px and above
-  - Navigation bar with visiblity for logo and all items and buttons
+  - Navigation bar with visibility for logo and all items and buttons
   - Grid layout adjusts to accommodate larger screen sizes.
 - **Tablet**: 768px - 991px
-  - Navigation bar: logo remains visible but items and buttons may collapsing to a hamburger drop down menu.
+  - Navigation bar: logo remains visible, but items and buttons may collapse to a hamburger drop down menu.
   - Blogs will be listed vertically.
 - **Mobile**: Below 768px
-  - Navigation bar: the Logo and the hamburger icon will vertically aligned.
+  - Navigation bar: the Logo and the hamburger icon will vertically align.
   - Content stacks vertically for easier scrolling on smaller screens.
 
 \
@@ -169,14 +180,14 @@ The website deliver a consistent and user-friendly experience across a wide rang
 All pages of a website have a navigation bar, hero section and footer. The purpose is to enhance user experience, improve navigation, and provide consistent branding and functionality across the entire site.
 
 ### Navigation Bar
-Intuitive, efficient and located in top of all pages for helping users find the information they're looking for quickly and easily.
+Intuitive, efficient, and located on top of all pages for helping users find the information they're looking for quickly and easily.
 
 <p align="center">
 <img src="documentation/readme_images/nav_bar.png" alt="nav_bar">
 </p>
 
 
-- Logo: It is created as a brand image positioned at the left-hand side. Contains text that represent the name of the website and the letter "L" replaced by an icon to illustirate the recycling battery. Clicking on the logo directs users back to the homepage.
+- Logo: It is created as a brand image positioned at the left-hand side. Contains text that represents the name of the website and the letter "L" replaced by an icon to illustrate the recycling battery. Clicking on the logo directs users back to the homepage.
 
 
 - Menu Items:
@@ -196,12 +207,12 @@ A captivating image under navigation bar to give a visual Appeal and Contextual 
 
 ### Footer
 Enhancing the accessibility and credibility of a website by providing important information to visitors.
-- **Social Media Bar**: Icons that allowing visitors to connect with the website on social media platforms.
+- **Social Media Bar**: Icons that allow visitors to connect with the website on social media platforms.
 - **Conact and About Us**: Give more information about the website and how to get in touch with us. 
 - **Copyright**: This helps protect the intellectual property of the website owner. With link to the top of the page.
 
 ## Homepage
-Our homepage is providing a snapshot of what the website offers and guiding users to explore further.
+Our homepage provides a snapshot of what the website offers and guides users to explore further.
 It contains the header and the footer that mentioned above, beside:
 
 ### Categories Section
@@ -211,9 +222,9 @@ It serves as a user-friendly way for visitors to explore the diverse range of co
 <img src="documentation/readme_images/userstory2.png" alt="View Categories">
 </p>
 
-- **Layout and Placement**: it is positioned prominently on the homepage under header and arranged horizontally across it's navigation bar, allowing users to easily see and access them for quick navigation. It also reached by clicking in the category item in the navigation bar.
-- **List all categories**: It displayed all automatically by default for easy access when openning the homepage for easy access.
-- **Open Corresponding Posts**: When a user clicks on a specific category button, it opens up a corresponding section of the blog on the same page, providing a seamless browsing experience.
+- **Layout and Placement**: it is positioned prominently on the homepage under header and arranged horizontally across its navigation bar, allowing users to easily see and access them for quick navigation. It also be reached by clicking on the category item in the navigation bar.
+- **List all categories**: It displayed all automatically by default for easy access when opening the homepage for easy access.
+- **Open Corresponding Posts**: When a user clicks on a specific category button, it opens a corresponding section of the blog on the same page, providing a seamless browsing experience.
 
 ### Posts Section
 The blog list section on a homepage serves as a dynamic showcase of the website's brief blog content, inviting visitors to delve deeper into the site and engage with its offerings.
@@ -221,8 +232,8 @@ The blog list section on a homepage serves as a dynamic showcase of the website'
 <img src="documentation/readme_images/userstory5_3.png" alt="View List Blog Posts">
 </p>
 
-- **List all Blog Posts**: It displayed all automatically by default when openning the homepage for easy access.
-- **Pagination**: Diveded by 4 - Allowing visitors to easily navigate through multiple pages to view more blog posts.
+- **List all Blog Posts**: It displayed all automatically by default when opening the homepage for easy access.
+- **Pagination**: Divided by 4 - Allowing visitors to easily navigate through multiple pages to view more blog posts.
 - Each blog post include:
   - Thumbnail Image.
   - Author name.
@@ -236,7 +247,7 @@ The blog list section on a homepage serves as a dynamic showcase of the website'
 </p>
 
 ## Post Detail 
-This page allows visitors to read the full blog post, and allows the registered users to interact with each other and with the admin by leave comments and likes.
+This page allows visitors to read the full blog post and allows the registered users to interact with each other and with the admin by leaving comments and likes.
 - **Blog full display section**
   - Image
   - Title
@@ -247,7 +258,7 @@ This page allows visitors to read the full blog post, and allows the registered 
 <img src="documentation/readme_images/postdetail_image_title.png  " alt="postdetail_image_title">
 </p>
 
-- **Like button icon**: Allows visitors to see the number of likes, and let registered users to like/undo like posts.
+- **Like button icon**: Allows visitors to see the number of likes and lets registered users to like/undo like posts.
 
 <p align="center">
 <img src="documentation/readme_images/postdetail_like.png" alt="postdetail_like">
@@ -281,24 +292,24 @@ For engage in discussions, share opinions, provide feedback, ask questions, or o
 <img src="documentation/readme_images/postdetail_comment_admin.png" alt="postdetail_comment_admin">
 </p>
 
-  - Display comments section: Allow visitors to see all comments with name of commneters and dates of commenting. Also let the registered users to delete their comments by clicking on red button.
+  - Display comments section: Allow visitors to see all comments with the name of commenters and dates of commenting. Also let the registered users delete their comments by clicking on the red button.
 
-  - Leave a comment section: Allows registered users to write a comment. But instead for visitor will display a welcoming message provided with a link to log in for leavivg a comment.
+  - Leave a comment section: Allows registered users to write a comment. But instead for visitor will display a welcoming message provided with a link to log in for leaving a comment.
 
-    Hint: The comment will not appear in the display comment section until the admin approve it.See the picture below:
+    Hint: The comment will not appear in the display comment section until the admin approves it.
 
 <p align="center">
 <img src="documentation/readme_images/postdetail_comment_approval.png" alt="Approve Comments">
 </p>
 
-- **Back button to same cayegory**: Button will allow users to go back to the same category that belong to the post.
+- **Back button to same cayegory**: Button will allow users to go back to the same category that belongs to the post.
 
 <p align="center">
 <img src="documentation/readme_images/postdetail_back_button.png" alt="postdetail_back_button">
 </p>
 
 ## Sign Up
- Sign up Page considers as the entry point for new users to create accounts and access the platform's features like leave a comment, delete their own comment, or like a post.
+ Sign up Page considered as the entry point for new users to create accounts and access the platform's features like leave a comment, delete their own comment, or like a post.
 
  <p align="center">
 <img src="documentation/readme_images/userstory15.png" alt="User Registration">
@@ -316,7 +327,7 @@ Provide a link to Sign in if the user already registered.
 A button to submit the form.
 
 ### Error Messages and Validation:
-If there are any errors in the sign-up form, such as missing fields, invalid input the page displays clear error messages indicating what went wrong and how the user can correct it.
+If there are any errors in the sign-up form, such as missing fields, invalid input, the page displays clear error messages indicating what went wrong and how the user can correct it.
 
 Below pictures refer such example error messages:
 
@@ -329,7 +340,7 @@ Below pictures refer such example error messages:
 </p>
 
 ### Confirmation Message:
-After successfully signing up, a confirmation message be displayed to inform users that they have been registered.
+After successfully signing up, a confirmation message is displayed to inform users that they have been registered.
 
 This message will auto close with timeout after 2 seconds.
 
@@ -341,7 +352,7 @@ This page will allow users to access their accounts or create new ones to intera
 </p>
 
 ### Sign in Option
-Provide a link to Sign up if the user not registered yet.
+Provide a link to Sign up if the users have not registered yet.
 
 ### Sign in Form
 - Username
@@ -367,13 +378,13 @@ This message will auto close with timeout after 2 seconds.
 </p>
 
 ## Sign Out
-Sign out Page considers as the endpoint for registered users who wish to log out of their accounts.
+Sign out Page is considered as the endpoint for registered users who wish to log out of their accounts.
 
 <p align="center">
 <img src="documentation/readme_images/userstory18_2.png" alt="Log in/Log out">
 </p>
 
-- **Log out Button**: located in the navigation bar at the homepage.
+- **Log out Button**: located in the navigation bar on the homepage.
 - **Confirmation Page**: A new page displaying confirmation message asking logged in user if they want to log out by clicking the red button.
 - **Confirmation Message**: After successfully signing out, a confirmation message displayed to inform logged in users that they have been logged out.
 This message will auto close with timeout after 2 seconds.
@@ -413,6 +424,7 @@ This message will auto close with timeout after 2 seconds.
 - [pydot](https://pypi.org/project/pydot/ "pydot") Library for creating, manipulating, and visualizing graphs in DOT format.
 - [looka](https://looka.com/ "lookas") – Create and design the logo.
 - [font awesome](https://looka.com/ "font awesome") – A robust icon set that contains scalable vector icons.
+- [cloud convert](https://cloudconvert.com/jpeg-to-webp "cloudconvert") Used to convert images to WEBP.
 - [Heroku](https://id.heroku.com/ "Heroku") Used to deploy the project.
 
 ## Validation and Auto-test Websites
@@ -436,7 +448,7 @@ Testing is conducted on various devices including desktops, laptops, tablets, an
 ## Code Validation
 
 ### W3C Markup HTML Validator
-Tested for homepage by W3c HTML Markup validation service and fixed the trailing slash and subtree errors. Then passed with noe more errors.
+Tested for homepage by W3c HTML Markup validation service and fixed the trailing slash and subtree errors. Then passed with no more errors.
 
 <p align="center">
 <img src="documentation/readme_images/html-validation.png" alt="html-validation">
@@ -449,7 +461,7 @@ And tested for all other pages and passed, except one error in the post_detail t
 </p>
 
 ### Jigsaw W3 CSS Validator
-CSS tested by Jigsaw W3 CSS Validaton service and passed with no errors.
+CSS tested by Jigsaw W3 CSS Validation service and passed with no errors.
 
 <p align="center">
 <img src="documentation/readme_images/css-validation.png" alt="css-validator">
@@ -464,14 +476,14 @@ Tested JavaScript code with only two warnings.
 <img src="documentation/readme_images/jshint_validator.png" alt="jshint_validator">
 </p>
 
-Tested again after fix it, and passed with no more warnings.
+Tested again after fixing it and passed with no more warnings.
 
 <p align="center">
 <img src="documentation/readme_images/jshint_warnings.png" alt="jshint_warnings">
 </p>
 
 ### PEP8 CI Python checker
-All python files tested with no errors, exept for one error in views for long line:
+All python files tested with no errors, except for one error in views for long line:
 
 <p align="center">
 <img src="documentation/readme_images/pep8ci.png" alt="PEP8 CI Python checker">
@@ -491,7 +503,7 @@ The website performed well when it came to the lighthouse test.
 # Bugs
 
 ## Fixed Bugs
-- **The draft post keep displaying in the site**:
+- **The draft post keeps displaying in the site**:
 
   To prevent draft posts from appearing in the site:
   
@@ -517,8 +529,8 @@ The website performed well when it came to the lighthouse test.
 ## Create Heroku Application
 
 -  Log in to Heroku account.
-- Create new application by click on **new** button then select **Create new app**.
-- Write application name then select the region then click on **Create App**.
+- Create a new application by clicking on new button then select Create new app.
+- Write application name then select the region then click on Create App.
 
 ## ElephantSQL & Cloudinary
 - Log in to ElephantSQL.
@@ -531,13 +543,13 @@ The website performed well when it came to the lighthouse test.
 - Create the project name.
 - Create the app name, then add it to settings.py
 - Migrate the changes and push it.
-- Write application name then select the region then click on **Create App**.
+- Write application name then select the region then click on Create App.
 - add the DATABASE_URL, SECRET_KEY & CLOUDINARY_URL to the settings.py file
 - Add the values of SECRET_KEY, DATABASE_URL and CLOUDINARY_URL keys at env.py and setting files.
 - Create import os statement for the env.py 
 - Add Heroku ALLOWED_HOSTS with localhost in settings.py
 - Created the Procfile and integrate it with the project.
-- Make add, commit and Push the changes to Github.
+- Make add, commit, and push the changes to Github.
 
 ## Heroku Deployment
 - log in again and select the heroku app you created.
@@ -546,9 +558,21 @@ The website performed well when it came to the lighthouse test.
   - key: SECRET_KEY | value: Django Secret Key from settings.py
   - key: CLOUDINARY_URL | value: Cloudinary API URL
   - key: DATABASE_URL | value: ElephantSQL database URL
--  Deploy tab to connect up with github account
-- connect up to the repository.
-- Click on deploy button.
+- Deploy tab to connect with github account.
+- Connect to the repository.
+- Click on the deploy button.
 
-Well done to deploy your application!
+Well done for deploying your application!
 
+\
+&nbsp;
+
+# Credits
+- Images from [medium](https://medium.com/@legaladvisory/exploring-the-impact-of-lithium-ion-battery-recycling-on-the-supply-chain-ad81fbd77275 "medium"), [jauch blog](https://www.jauch.com/blog/en/the-lithium-batterys-beginnings/ "jauch blog"), and [pollyproducts](https://pollyproducts.com/lithium-batteries-are-causing-fires-at-recycling-plants-are-they-really-environmentally-friendly/ "pollyproducts") websites.
+- Blogs and articles from [eco serve](https://ecoserveindia.com/the-importance-of-lithium-ion-battery-recycling.html "eco serve"), [lohum](https://lohum.com/media/blog/environmental-and-social-benefits-of-lithium-battery-recycling// "lohum"), [medium](https://medium.com/@battrixxindustry/revolutionizing-li-ion-battery-recycling-for-a-sustainable-tomorrow-6532084c9382 "medium"), [PrecisionPulseg](https://www.linkedin.com/pulse/sizeable-growth-lithium-ion-battery-recycling-market-trends-1zdhc/?trk=article-ssr-frontend-pulse_more-articles_related-content-card "PrecisionPulse").
+- [code institute](https://learn.codeinstitute.net/login?next=/ "code institute") I think therefore I blog.
+- [stack overflow](https://stackoverflow.com/ "stack overflow") function for filter posts by selected category and docstrings.
+- [bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/ "bootstrap") navbar and buttons.
+- [MDB](https://mdbootstrap.com/docs/standard/navigation/footer/examples-and-customization/ "MDB") footer.
+- [tech2 etc](https://www.youtube.com/watch?v=QdavXfltTeY "tech2 etc") youtube.
+- [Suraj Katwal - wplogout](https://www.wplogout.com/export-database-diagrams-erd-from-django/?unapproved=4810&moderation-hash=1f8e0dda1465cb535b42a74c3759eed6#comment-4810 "wplogout") export ERD.
