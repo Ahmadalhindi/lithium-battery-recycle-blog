@@ -310,5 +310,6 @@ Comment deleted:
 <img src="documentation/readme_images/userstory20_2.png" alt="Delete comments">
 </p>
 
-\
-&nbsp;
+- - -
+
+[Back to top](<#manual-tests>)

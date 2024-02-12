@@ -1,7 +1,6 @@
 #  <div align="center">Lithium-ion Battery Recycle Blog </div>
 
-\
-&nbsp;
+
 
 <p align="center">
 <img src="static/template_images/logo.webp" alt="Lithium Battery Recycle Blog">
@@ -9,18 +8,21 @@
 
 \
 &nbsp;
+
 ## Introduction
 
-Welcome to my repository that represnted Lithium-ion Battery Recycle Blog website.
-It is a blog website to share knowledge and increase learning about recycling lithium-ion batteries.
+Welcome to my repository that represents Lithium-ion Battery Recycle Blog website.
+It is a blog website to share knowledge, encourage users for more interaction and increase learning about recycling lithium-ion batteries.
+
+ This repository contains the code for building a modern and responsive blog website using Bootstrap for styling, Django for backend development, and a combination of JavaScript and Python for dynamic functionality.
 
 <p align="center">
 <img src="documentation/readme_images/amiresponsive.png" alt="amiresponsives">
 </p>
 
-The live to website: [Lithium Battery Recycle Blog website](https://lithium2023-734017e000a2.herokuapp.com/)
+Visit [Lithium Battery Recycle Blog](https://lithium2023-734017e000a2.herokuapp.com/) website
 
-The link to GitHub Repository: [GitHub Repository](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog)
+Visit [GitHub Repository](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog)
 
 - - -
 
@@ -47,6 +49,7 @@ The link to GitHub Repository: [GitHub Repository](https://github.com/Ahmadalhin
   - [Post Detail](#post-detail)
   - [Sign Up](#sign-up)
   - [Sign Out](#sign-out)
+- [Technologies Used](#technologies-used)
 - [Testing](#testing)
   - [Manual Test](#manual-test)
   - [Responsive Screens Testing](#responsive-screens-testing)
@@ -66,8 +69,8 @@ The link to GitHub Repository: [GitHub Repository](https://github.com/Ahmadalhin
 
 ## Site Objectives
 - Share knowledge and increase learning about recycling lithium-ion batteries.
-- Achieve the SDGs and sustainability goals for a better green environment.
 - Encourage social and friendly interactions between users.
+- Achieve the SDGs and sustainability goals for a better green environment.
 - Nonprofit website.
 
 ## Target Audience
@@ -75,7 +78,7 @@ The link to GitHub Repository: [GitHub Repository](https://github.com/Ahmadalhin
 - Users that own electric vehicle / EV based on lithium-ion battery.
 - Environmentalists who stand up for the environment and renewable energy.
 - Investors who are interested in buying stocks from lithium battery recycle forms.
-- People who can't afford to pay for membership on the website.
+- People who can't afford to pay for membership.
 
 ## User Stories
 | <div align="center">#</div> | <div align="center">Title</div> |  <div align="center">User/Registered user/Admin</div> | <div align="center">Content</div> | <div align="center">Label</div> |
@@ -443,13 +446,12 @@ For more information visit the [manual test](readme_manual_test.md) page.
 # Technologies Used
 
 ## Languages
-- [HTML5](https://en.wikipedia.org/wiki/HTML "HTML")
-- [CSS3](https://en.wikipedia.org/wiki/CSS "CSS")
-- [JavaScript](https://en.wikipedia.org/wiki/JavaScript "JavaScript")
-- [Python]( https://en.wikipedia.org/wiki/Python_(programming_language) "Python") 
+- [HTML5](https://en.wikipedia.org/wiki/HTML "HTML") and [CSS3](https://en.wikipedia.org/wiki/CSS "CSS") For markup and styling of the website's frontend.
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript "JavaScript") Used for dynamic interactions and enhancing user experience.
+- [Python]( https://en.wikipedia.org/wiki/Python_(programming_language) "Python") Handle various backend tasks efficiently.
 ## Frameworks 
-- [Django3.2.23](https://www.djangoproject.com/ "Django")
-- [Bootstrap5](https://getbootstrap.com/ "Bootstrap")
+- [Django3.2.23](https://www.djangoproject.com/ "Django") Backend framework, handling data management, user authentication, and routing.
+- [Bootstrap5](https://getbootstrap.com/ "Bootstrap") For frontend development, providing a sleek and responsive design.
 
 ## Libraries and Tools
 - [cloudinary](https://cloudinary.com/ "cloudinary") - Used to store website's images.
