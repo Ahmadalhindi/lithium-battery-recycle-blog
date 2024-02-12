@@ -49,6 +49,7 @@ Visit [GitHub Repository](https://github.com/Ahmadalhindi/lithium-battery-recycl
   - [Post Detail](#post-detail)
   - [Sign Up](#sign-up)
   - [Sign Out](#sign-out)
+  - [Admin Panel](#admin-panel)
 - [Technologies Used](#technologies-used)
 - [Testing](#testing)
   - [Manual Test](#manual-test)
@@ -423,7 +424,7 @@ This message will auto close with timeout after 2 seconds.
 Django Administration allows admin to manage database by create, update and delete (CRUD) the categories, posts and comments.
 
 <p align="center">
-<img src="/workspace/lithium-battery-recycle-blog/documentation/readme_images/adminpanel_category.png" alt="adminpanel_category">
+<img src="documentation/readme_images/adminpanel_category.png" alt="adminpanel_category">
 </p>
 
 <p align="center">
