@@ -1,6 +1,6 @@
 # Manual Tests
 
-[Back to README.md](/workspace/lithium-battery-recycle-blog/README.md)
+Back to[ README](README.md)
 
 \
 &nbsp;

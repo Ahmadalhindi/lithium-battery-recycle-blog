@@ -1,4 +1,4 @@
-#  <div align="center">Lithium Battery Recycle Blog </div>
+#  <div align="center">Lithium-ion Battery Recycle Blog </div>
 
 \
 &nbsp;
@@ -11,7 +11,7 @@
 &nbsp;
 ## Introduction
 
-Welcome to my repository that represnted Lithium Battery Recycle Blog website.
+Welcome to my repository that represnted Lithium-ion Battery Recycle Blog website.
 It is a blog website to share knowledge and increase learning about recycling lithium-ion batteries.
 
 <p align="center">
@@ -22,45 +22,55 @@ The live to website: [Lithium Battery Recycle Blog website](https://lithium2023-
 
 The link to GitHub Repository: [GitHub Repository](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog)
 
+- - -
+
 \
 &nbsp;
 
 ## Contents
 
 - [Introduction](#introduction)
-- [Site Objectives](#site-objectives)
 - [User Experience/UX](#user-experienceux)
+  - [Site Objectives](#site-objectives)
   - [Target Audience](#target-audience)
   - [User Stories](#user-stories)
-- [Entity-Relationship Diagram](#Entity-Relationship-Diagram)
-- [Database Plan](#Database-Plan)
-- [Structure](#Structure)
-  - [Wireframes](##Wireframes)
-  - [Fonts](##Fonts)
-  - [Responsive Screens](##Responsive-Screens)
-- [Features](#Features)
-- [All pages](##All-pages)
-- [Homepage](##Homepage)
-- [Post Detail](##Post-Detail)
-- [Wireframes](#Wireframes)
-- [Wireframes](#Wireframes)
+- [Structure](#structure)
+  - [Entity-Relationship Diagram ERD](#entity-relationship-diagram-erd)
+  - [Database Plan](#database-plan)
+- [Skeleton](#skeleton)
+  - [Wireframes](#wireframes)
+  - [Fonts](#fonts)
+  - [Responsive Screens](#responsive-screens)
+- [Features](#features)
+  - [All pages](#all-pages)
+  - [Homepage](#homepage)
+  - [Post Detail](#post-detail)
+  - [Sign Up](#sign-up)
+  - [Sign Out](#sign-out)
+- [Testing](#testing)
+  - [Manual Test](#manual-test)
+  - [Responsive Screens Testing](#responsive-screens-testing)
+  - [Code Validation](#code-validation)
+- [Bugs](#bugs)
+  - [Fixed Bugs](#fixed-bugs)
+  - [Unfixed Bugs](#unfixed-bugs)
+- [Deployment](#deployment)
+- [Credits](#credits)
 
 \
 &nbsp;
 
-## Site Objectives
-1. Share knowledge and increase learning about recycling lithium-ion batteries.
-2. Achieve the SDGs and sustainability goals for a better green environment.
-3. Encourage social and friendly interactions between users.
-4. Nonprofit website.
-
-\
-&nbsp;
+- - -
 
 # User Experience/UX
 
-## Target Audience
+## Site Objectives
+- Share knowledge and increase learning about recycling lithium-ion batteries.
+- Achieve the SDGs and sustainability goals for a better green environment.
+- Encourage social and friendly interactions between users.
+- Nonprofit website.
 
+## Target Audience
 - Users that are interested in gaining more knowledge about recycling lithium-ion batteries.
 - Users that own electric vehicle / EV based on lithium-ion battery.
 - Environmentalists who stand up for the environment and renewable energy.
@@ -68,8 +78,6 @@ The link to GitHub Repository: [GitHub Repository](https://github.com/Ahmadalhin
 - People who can't afford to pay for membership on the website.
 
 ## User Stories
-
-
 | <div align="center">#</div> | <div align="center">Title</div> |  <div align="center">User/Registered user/Admin</div> | <div align="center">Content</div> | <div align="center">Label</div> |
 | :------: | :------: | :------: | ------ | :------: |
 | [2](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/2) | View categories | User/Registered User/Admin | I want to be able to view all the categories as default so that I can fast choose one particular category. | <span style="color:red">Must have</span> |
@@ -90,25 +98,32 @@ The link to GitHub Repository: [GitHub Repository](https://github.com/Ahmadalhin
 | [17](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/16) | Search for blogs | User/Registered User/Admin | Deleted - Issue not accomplish for lack of time | <span style="color:green">Nice to have</span> - Deleted |
 | [18](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/18) | Log in / Log out | Registered User/Admin | I want to be able to log in and log out from my account so that I can interact with the blog and ensure the safety of my personal content when I log out. | <span style="color:red">Must have</span> |
 | [19](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/19) | Manage Categories | Admin | I want to be able to create, edit and delete categories so that I can organize and categorize posts effectively. | <span style="color:red">Must have</span> |
+| [20](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/20) | Delete comments | Registered User/Admin | I want to be able to delete my own comments so that I can manage and control my own comments. | <span style="color:yellow">Should have</span> |
+
+- - -
+
+[Back to contents](<#contents>)
 
 \
 &nbsp;
 
-# Entity-Relationship Diagram
+# Structure
+
+## Entity-Relationship Diagram ERD
 
 <p align="center">
 <img src="erd.png" alt="Entity-Relationship Diagram">
 </p>
 
-# Database Plan
+## Database Plan
 
-## Category Model:
+### Category Model:
 
 | <div align="center">Attribute</div> | <div align="center">Type</div> | <div align="center">Detail</div> | Key/Relation
 |:-------------:|:-------------:|--------------|------------|
 | name | str/char(100)    | The name of the category    | 
 
-## Post Model:
+### Post Model:
 | <div align="center">Attribute</div> | <div align="center">Type</div> | <div align="center">Detail</div> | <div align="center">Key/Relation</div>
 |-------------|-------------|--------------|------------|
 | title | str/char(200)    | The title of the post | 
@@ -123,7 +138,7 @@ The link to GitHub Repository: [GitHub Repository](https://github.com/Ahmadalhin
 | status | int | The status of the post (Draft or Published) | 
 | name | str/text | A short excerpt from the post | 
 
-## Comment Model:
+### Comment Model:
 | <div align="center">Attribute</div> | <div align="center">Type</div> | <div align="center">Detail</div> | <div align="center">Key/Relation</div>
 |-------------|-------------|--------------|------------|
 | post | Post | The post to which the comment belongs | ForeignKey to Post model |
@@ -133,10 +148,14 @@ The link to GitHub Repository: [GitHub Repository](https://github.com/Ahmadalhin
 | created_at | datetime   | The timestamp when the comment was created | 
 | approved | bool | Indicates whether the comment is approved or not |
 
+- - -
+
+[Back to contents](<#contents>)
+
 \
 &nbsp;
 
-# Structure
+# Skeleton
 ## Wireframes
 - Home page:
 <p align="center">
@@ -170,6 +189,10 @@ The website delivers a consistent and user-friendly experience across a wide ran
 - **Mobile**: Below 768px
   - Navigation bar: the Logo and the hamburger icon will vertically align.
   - Content stacks vertically for easier scrolling on smaller screens.
+
+- - -
+
+[Back to contents](<#contents>)
 
 \
 &nbsp;
@@ -393,6 +416,27 @@ This message will auto close with timeout after 2 seconds.
 <img src="documentation/readme_images/userstory18_3.png" alt="Log in/Log out">
 </p>
 
+## Admin Panel
+Django Administration allows admin to manage database by create, update and delete (CRUD) the categories, posts and comments.
+
+<p align="center">
+<img src="/workspace/lithium-battery-recycle-blog/documentation/readme_images/adminpanel_category.png" alt="adminpanel_category">
+</p>
+
+<p align="center">
+<img src="documentation/readme_images/adminpanel_post.png" alt="adminpanel_post">
+</p>
+
+<p align="center">
+<img src="documentation/readme_images/adminpanel_comment.png" alt="adminpanel_comment">
+</p>
+
+For more information visit the [manual test](readme_manual_test.md) page.
+
+- - -
+
+[Back to contents](<#contents>)
+
 \
 &nbsp;
 
@@ -434,15 +478,19 @@ This message will auto close with timeout after 2 seconds.
 - [python Syntax Checker PEP8](https://www.pythonchecker.com/ "Python Syntax Checker PEP8") – To validate all the Python files, making sure they align with PEP8.
 - [lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en "Lighthouse") – To check the website’s performance and accessibility. Improving the quality of web pages.
 
+- - -
+
+[Back to contents](<#contents>)
+
 \
 &nbsp;
 
-# Test
+# Testing
 
 ## Manual Test
 Click on provided link to visit the [manual test](readme_manual_test.md) page.
 
-## Responsive Screens Test
+## Responsive Screens Testing
 Testing is conducted on various devices including desktops, laptops, tablets, and smartphones.
 
 ## Code Validation
@@ -497,6 +545,10 @@ The website performed well when it came to the lighthouse test.
 <img src="documentation/readme_images/lighthouse.png" alt="lighthouse">
 </p>
 
+- - -
+
+[Back to contents](<#contents>)
+
 \
 &nbsp;
 
@@ -520,6 +572,10 @@ The website performed well when it came to the lighthouse test.
 ## Unfixed Bugs
 - The posts not sorted by date created.
 - Uncaught (in promise) Error: A listener indicated an asynchronous response by returning true, but the message channel closed before a response was received
+
+- - -
+
+[Back to contents](<#contents>)
 
 \
 &nbsp;
@@ -564,15 +620,23 @@ The website performed well when it came to the lighthouse test.
 
 Well done for deploying your application!
 
+- - -
+
 \
 &nbsp;
 
 # Credits
-- Images from [medium](https://medium.com/@legaladvisory/exploring-the-impact-of-lithium-ion-battery-recycling-on-the-supply-chain-ad81fbd77275 "medium"), [jauch blog](https://www.jauch.com/blog/en/the-lithium-batterys-beginnings/ "jauch blog"), and [pollyproducts](https://pollyproducts.com/lithium-batteries-are-causing-fires-at-recycling-plants-are-they-really-environmentally-friendly/ "pollyproducts") websites.
-- Blogs and articles from [eco serve](https://ecoserveindia.com/the-importance-of-lithium-ion-battery-recycling.html "eco serve"), [lohum](https://lohum.com/media/blog/environmental-and-social-benefits-of-lithium-battery-recycling// "lohum"), [medium](https://medium.com/@battrixxindustry/revolutionizing-li-ion-battery-recycling-for-a-sustainable-tomorrow-6532084c9382 "medium"), [PrecisionPulseg](https://www.linkedin.com/pulse/sizeable-growth-lithium-ion-battery-recycling-market-trends-1zdhc/?trk=article-ssr-frontend-pulse_more-articles_related-content-card "PrecisionPulse").
-- [code institute](https://learn.codeinstitute.net/login?next=/ "code institute") I think therefore I blog.
-- [stack overflow](https://stackoverflow.com/ "stack overflow") function for filter posts by selected category and docstrings.
-- [bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/ "bootstrap") navbar and buttons.
-- [MDB](https://mdbootstrap.com/docs/standard/navigation/footer/examples-and-customization/ "MDB") footer.
-- [tech2 etc](https://www.youtube.com/watch?v=QdavXfltTeY "tech2 etc") youtube.
-- [Suraj Katwal - wplogout](https://www.wplogout.com/export-database-diagrams-erd-from-django/?unapproved=4810&moderation-hash=1f8e0dda1465cb535b42a74c3759eed6#comment-4810 "wplogout") export ERD.
+- [medium](https://medium.com/@legaladvisory/exploring-the-impact-of-lithium-ion-battery-recycling-on-the-supply-chain-ad81fbd77275 "medium"), [jauch blog](https://www.jauch.com/blog/en/the-lithium-batterys-beginnings/ "jauch blog"), and [pollyproducts](https://pollyproducts.com/lithium-batteries-are-causing-fires-at-recycling-plants-are-they-really-environmentally-friendly/ "pollyproducts"): Images
+- [eco serve](https://ecoserveindia.com/the-importance-of-lithium-ion-battery-recycling.html "eco serve"), [lohum](https://lohum.com/media/blog/environmental-and-social-benefits-of-lithium-battery-recycling// "lohum"), [medium](https://medium.com/@battrixxindustry/revolutionizing-li-ion-battery-recycling-for-a-sustainable-tomorrow-6532084c9382 "medium"), [PrecisionPulseg](https://www.linkedin.com/pulse/sizeable-growth-lithium-ion-battery-recycling-market-trends-1zdhc/?trk=article-ssr-frontend-pulse_more-articles_related-content-card "PrecisionPulse"): Blogs and articles.
+- [code institute](https://learn.codeinstitute.net/login?next=/ "code institute"): I think therefore I blog.
+- [stack overflow](https://stackoverflow.com/ "stack overflow"): Function for filter posts by selected category and docstrings.
+- [bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/ "bootstrap"): Navbar and buttons.
+- [MDB](https://mdbootstrap.com/docs/standard/navigation/footer/examples-and-customization/ "MDB"): Footer.
+- [Suraj Katwal - wplogout](https://www.wplogout.com/export-database-diagrams-erd-from-django/?unapproved=4810&moderation-hash=1f8e0dda1465cb535b42a74c3759eed6#comment-4810 "wplogout"): Export ERD from Django.
+
+- - -
+
+\
+&nbsp;
+
+[Back to top](<#introduction>)
