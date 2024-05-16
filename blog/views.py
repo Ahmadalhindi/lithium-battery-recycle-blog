@@ -130,7 +130,15 @@ class PostDetail(generic.View):
             except Comment.DoesNotExist:
                 pass
 
-        if comment_form.is_valid():
+        elif 'edit_comment_id' in request.POST:
+            comment_id_edit = request.POST['edit_comment_id']
+            comment_to_edit = get_object_or_404(Comment, id=comment_id_edit)
+
+            if comment_form.is_valid():
+                comment_to_edit.body = comment_form.cleaned_data['body']
+                comment_to_edit.save()
+
+        elif comment_form.is_valid():
             comment_form.instance.email = request.user.email
             comment_form.instance.name = request.user.username
             comment = comment_form.save(commit=False)
