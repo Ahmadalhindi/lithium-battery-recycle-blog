@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
+from django.contrib import messages
 from .models import Category, Post, Comment
 from .forms import CommentForm
 
@@ -127,20 +128,25 @@ class PostDetail(generic.View):
         if 'delete_comment_id' in request.POST:
             comment_id_delete = request.POST['delete_comment_id']
             try:
-                comment_to_delete = Comment.objects.get(id=comment_id_delete)
+                comment_to_delete = Comment.objects.get(id=comment_id_delete, name=request.user.username)
                 comment_to_delete.delete()
+                messages.success(request, 'Comment deleted successfully.')
             except Comment.DoesNotExist:
-                pass
+                messages.error(request, 'Comment not found or you do not have permission to delete it.')
 
         elif 'edit_comment_id' in request.POST:
             comment_id_edit = request.POST['edit_comment_id']
-            comment_to_edit = get_object_or_404(Comment, id=comment_id_edit)
+            comment_to_edit = get_object_or_404(Comment, id=comment_id_edit, name=request.user.username)
 
             if comment_form.is_valid():
                 comment_to_edit.body = comment_form.cleaned_data['body']
-                comment_to_edit.approved = False
+                comment_to_edit.approved = False  # Re-approval required after editing
                 comment_to_edit.save()
                 commented = True
+                messages.success(request, 'Comment updated successfully. Awaiting approval.')
+            else:
+                messages.error(request, 'Error updating comment. Please correct the errors below.')
+
 
         elif comment_form.is_valid():
             comment_form.instance.email = request.user.email
@@ -148,11 +154,12 @@ class PostDetail(generic.View):
             comment = comment_form.save(commit=False)
             comment.post = post
             comment.save()
-            commented = True
-
+            messages.success(request, 'Comment submitted successfully. Awaiting approval.')
         else:
-            comment_form = CommentForm()
+            messages.error(request, 'Error submitting comment. Please correct the errors below.')
 
+        # comment_form = CommentForm()
+            
         return render(
             request,
             "post_detail.html",
