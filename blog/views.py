@@ -5,6 +5,7 @@ from .models import Category, Post, Comment
 from .forms import CommentForm
 
 
+
 class PostListView(generic.ListView):
     """
     View for displaying a list of posts, optionally filtered by category.
@@ -121,6 +122,7 @@ class PostDetail(generic.View):
             liked = True
 
         comment_form = CommentForm(data=request.POST)
+        commented = False 
 
         if 'delete_comment_id' in request.POST:
             comment_id_delete = request.POST['delete_comment_id']
@@ -136,7 +138,9 @@ class PostDetail(generic.View):
 
             if comment_form.is_valid():
                 comment_to_edit.body = comment_form.cleaned_data['body']
+                comment_to_edit.approved = False
                 comment_to_edit.save()
+                commented = True
 
         elif comment_form.is_valid():
             comment_form.instance.email = request.user.email
@@ -144,6 +148,8 @@ class PostDetail(generic.View):
             comment = comment_form.save(commit=False)
             comment.post = post
             comment.save()
+            commented = True
+
         else:
             comment_form = CommentForm()
 
@@ -154,7 +160,7 @@ class PostDetail(generic.View):
                 "category": category,
                 "post": post,
                 "comments": comments,
-                "commented": True,
+                "commented": commented,
                 "comment_form": comment_form,
                 "liked": liked
             },
