@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.core.exceptions import ValidationError
+from django.core.validators import MinLengthValidator, EmailValidator
 from cloudinary.models import CloudinaryField
 
 
@@ -16,13 +18,18 @@ class Category(models.Model):
     Methods:
         __str__: Returns a string representation of the category.
     """
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100, unique=True, validators=[MinLengthValidator(5)])
 
     def __str__(self):
         """
         Returns the name of the category as its string representation.
         """
         return self.name
+    
+    def clean(self):
+        super().clean()
+        if Category.objects.filter(name__iexact=self.name).exists():
+            raise ValidationError("Category with this name already exists.")
 
 
 class Post(models.Model):
@@ -51,7 +58,7 @@ class Post(models.Model):
         __str__: Returns a string representation of the post.
         number_of_likes: Returns the count of users who liked the post.
     """
-    title = models.CharField(max_length=200, unique=True)
+    title = models.CharField(max_length=200, unique=True, validators=[MinLengthValidator(5)])
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="blog_posts")
@@ -75,6 +82,13 @@ class Post(models.Model):
         Returns the title of the post as its string representation.
         """
         return self.title
+
+    def clean(self):
+        super().clean()
+        if self.title.strip() == "":
+            raise ValidationError("The title cannot be empty.")
+        if self.content.strip() == "":
+            raise ValidationError("The content cannot be empty.")
 
     def number_of_likes(self):
         """
@@ -105,7 +119,7 @@ class Comment(models.Model):
     """
     post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="comments")
     name = models.CharField(max_length=90)
-    email = models.EmailField()
+    email = models.EmailField(blank=True, validators=[EmailValidator()])
     body = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     approved = models.BooleanField(default=False)
@@ -122,3 +136,7 @@ class Comment(models.Model):
         including the post title and commenter's name.
         """
         return f"commented on {self.post.title} by {self.name}"
+
+    def clean(self):
+        if len(self.body) < 6:
+            raise ValidationError('Comment body should be at least 6 characters long.')
