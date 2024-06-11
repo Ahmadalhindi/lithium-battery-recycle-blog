@@ -103,15 +103,14 @@ class PostDetail(generic.View):
 
     def post(self, request, slug, *args, **kwargs):
         """
-        Handles POST requests for post detail view,
-        including comment submission.
+        Handle POST requests for submitting comments on a post.
 
         Args:
             request: The HTTP request.
             slug (str): The slug of the post.
 
         Returns:
-            HttpResponse: Rendered template with updated post details.
+            HttpResponse: Rendered template with updated comments.
         """
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
@@ -119,11 +118,11 @@ class PostDetail(generic.View):
         comments = post.comments.filter(approved=True).order_by("created_at")
         liked = False
 
-        if post.likes.filter(id=self.request.user.id).exists():
+        if post.likes.filter(id=request.user.id).exists():
             liked = True
 
         comment_form = CommentForm(data=request.POST)
-        commented = False 
+        commented = False
 
         if 'delete_comment_id' in request.POST:
             comment_id_delete = request.POST['delete_comment_id']
@@ -145,8 +144,9 @@ class PostDetail(generic.View):
                 commented = True
                 messages.success(request, 'Comment updated successfully. Awaiting approval.')
             else:
+                # Re-initialize form with the existing comment body for display in the template
+                comment_form = CommentForm(initial={'body': comment_to_edit.body})
                 messages.error(request, 'Error updating comment. Please correct the errors below.')
-
 
         elif comment_form.is_valid():
             comment_form.instance.email = request.user.email
@@ -158,8 +158,6 @@ class PostDetail(generic.View):
         else:
             messages.error(request, 'Error submitting comment. Please correct the errors below.')
 
-        # comment_form = CommentForm()
-            
         return render(
             request,
             "post_detail.html",
@@ -172,7 +170,6 @@ class PostDetail(generic.View):
                 "liked": liked
             },
         )
-
 
 class PostLike(View):
     """
