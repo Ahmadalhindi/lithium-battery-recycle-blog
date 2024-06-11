@@ -145,13 +145,29 @@ class PostDetail(generic.View):
                 messages.success(request, 'Comment updated successfully. Awaiting approval.')
             else:
                 # Re-initialize form with the existing comment body for display in the template
-                comment_form = CommentForm(initial={'body': comment_to_edit.body})
+                """ comment_form = CommentForm(initial={'body': comment_to_edit.body}) """
+                error_validation = True
                 messages.error(request, 'Error updating comment. Please correct the errors below.')
+                
+                return render(
+                    request,
+                    "post_detail.html",
+                    {
+                        "category": category,
+                        "post": post,
+                        "comments": comments,
+                        "commented": commented,
+                        "comment_form": comment_form,
+                        "liked": liked,
+                        "error_validation": error_validation,
+                    },
+                )
 
         elif comment_form.is_valid():
             comment_form.instance.email = request.user.email
             comment_form.instance.name = request.user.username
             comment = comment_form.save(commit=False)
+            commented = True
             comment.post = post
             comment.save()
             messages.success(request, 'Comment submitted successfully. Awaiting approval.')
@@ -167,7 +183,7 @@ class PostDetail(generic.View):
                 "comments": comments,
                 "commented": commented,
                 "comment_form": comment_form,
-                "liked": liked
+                "liked": liked,
             },
         )
 

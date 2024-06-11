@@ -143,10 +143,14 @@
       </div>
     </div>
 
-    <!-- Write comment with approval alarm --> 
+    <!-- Write comment with approval alarm and validation --> 
     <div class="col-md-4 card mb-4 mt-3">
       <div class="card-body">
-        {% if commented %}
+        {% if error_validation %}
+        <div class="alert alert-danger" role="alert">
+          Comment should be at least 8 characters long
+        </div>
+        {% else %} {% if commented %}
         <div class="alert alert-success" role="alert">
           Your comment is awaiting approval
         </div>
@@ -162,7 +166,7 @@
         {% else %}
         <p>Please <a href="{% url 'account_login' %}">log in</a> to leave a comment
         <p>
-        {% endif %} {% endif %}
+        {% endif %} {% endif %} {% endif %} 
       </div>
     </div>
   </div>
@@ -190,16 +194,4 @@ function hideEditForm(commentId) {
 }
 </script>
 
-<!-- <script>
-  $(document).ready(function() {
-      $("form").on("submit", function(event) {
-          const body = $("textarea[name='body']").val();
-          if (body.length < 6) {
-              event.preventDefault();
-              alert("Comment body should be at least 6 characters long.");
-          }
-      });
-  });
-</script> -->
-<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
 {% endblock content %}

@@ -119,7 +119,7 @@ class Comment(models.Model):
     """
     post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="comments")
     name = models.CharField(max_length=90)
-    email = models.EmailField(blank=True, validators=[EmailValidator()])
+    email = models.EmailField(validators=[EmailValidator()])
     body = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     approved = models.BooleanField(default=False)
@@ -138,5 +138,8 @@ class Comment(models.Model):
         return f"commented on {self.post.title} by {self.name}"
 
     def clean(self):
-        if len(self.body) < 6:
-            raise ValidationError('Comment body should be at least 6 characters long.')
+        """
+        Custom validation for the 'body' field.
+        """
+        if len(self.body) < 8:
+            raise ValidationError('Comment body should be at least 8 characters long.')
