@@ -17,17 +17,32 @@ class Category(models.Model):
 
     Methods:
         __str__: Returns a string representation of the category.
+        clean: Validates that the category name is unique, ignoring case.
     """
-    name = models.CharField(max_length=100, unique=True, validators=[MinLengthValidator(5)])
+    # The name of the category, with a maximum length of 100 characters.
+    # The name must be unique and at least 5 characters long.
+    name = models.CharField(
+        max_length=100,
+        unique=True,
+        validators=[MinLengthValidator(5)]
+    )
 
     def __str__(self):
         """
         Returns the name of the category as its string representation.
         """
         return self.name
-    
+
     def clean(self):
+        """
+        Validates the category name. Ensures that the category name is unique,
+        ignoring case sensitivity.
+
+        Raises:
+            ValidationError: If a category with the same name already exists.
+        """
         super().clean()
+        # Check if a category with the same name already exists.
         if Category.objects.filter(name__iexact=self.name).exists():
             raise ValidationError("Category with this name already exists.")
 
@@ -58,7 +73,11 @@ class Post(models.Model):
         __str__: Returns a string representation of the post.
         number_of_likes: Returns the count of users who liked the post.
     """
-    title = models.CharField(max_length=200, unique=True, validators=[MinLengthValidator(5)])
+    title = models.CharField(
+        max_length=200,
+        unique=True,
+        validators=[MinLengthValidator(5)]
+    )
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="blog_posts")
@@ -75,7 +94,7 @@ class Post(models.Model):
         """
         The default ordering for the posts based on the creation timestamp.
         """
-        ordering = ['created_at']
+        ordering = ['-created_at']
 
     def __str__(self):
         """
@@ -84,6 +103,9 @@ class Post(models.Model):
         return self.title
 
     def clean(self):
+        """
+        Validates that the title and content fields are not empty.
+        """
         super().clean()
         if self.title.strip() == "":
             raise ValidationError("The title cannot be empty.")
@@ -116,8 +138,13 @@ class Comment(models.Model):
 
     Methods:
         __str__: Returns a string representation of the comment.
+        clean: Custom validation for the 'body' field.
     """
-    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="comments")
+    post = models.ForeignKey(
+        Post,
+        on_delete=models.CASCADE,
+        related_name="comments"
+    )
     name = models.CharField(max_length=90)
     email = models.EmailField(validators=[EmailValidator()])
     body = models.TextField()
@@ -128,7 +155,7 @@ class Comment(models.Model):
         """
         The default ordering for the comments based on the creation timestamp.
         """
-        ordering = ['created_at']
+        ordering = ['-created_at']
 
     def __str__(self):
         """
@@ -140,6 +167,10 @@ class Comment(models.Model):
     def clean(self):
         """
         Custom validation for the 'body' field.
+        Raises:
+            ValidationError: If the comment body is too short.
         """
         if len(self.body) < 8:
-            raise ValidationError('Comment body should be at least 8 characters long.')
+            raise ValidationError(
+                'Comment body should be at least 8 characters long.'
+            )

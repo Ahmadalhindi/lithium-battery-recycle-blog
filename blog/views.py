@@ -6,7 +6,6 @@ from .models import Category, Post, Comment
 from .forms import CommentForm
 
 
-
 class PostListView(generic.ListView):
     """
     View for displaying a list of posts, optionally filtered by category.
@@ -39,10 +38,12 @@ class PostListView(generic.ListView):
         Returns:
             QuerySet: Filtered and ordered queryset of blog posts.
         """
-        queryset = Post.objects.filter(status=1).order_by("created_at")
+        queryset = Post.objects.filter(status=1).order_by("-created_at")
         category_name = self.kwargs.get('category_name', None)
         if category_name:
-            return Post.objects.filter(category__name=category_name, status=1).order_by("created_at")
+            return Post.objects.filter(
+                category__name=category_name, status=1
+            ).order_by("-created_at")
         else:
             return queryset
 
@@ -83,8 +84,10 @@ class PostDetail(generic.View):
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
         category = post.category
-        comments = post.comments.filter(approved=True).order_by("created_at")
+        comments = post.comments.filter(approved=True).order_by("-created_at")
         liked = False
+
+        # Check if the user has liked the post
         if post.likes.filter(id=self.request.user.id).exists():
             liked = True
 
@@ -118,37 +121,54 @@ class PostDetail(generic.View):
         comments = post.comments.filter(approved=True).order_by("created_at")
         liked = False
 
+        # Check if the user has liked the post
         if post.likes.filter(id=request.user.id).exists():
             liked = True
 
         comment_form = CommentForm(data=request.POST)
         commented = False
 
+        # Check if a delete comment request was made
         if 'delete_comment_id' in request.POST:
             comment_id_delete = request.POST['delete_comment_id']
             try:
-                comment_to_delete = Comment.objects.get(id=comment_id_delete, name=request.user.username)
+                comment_to_delete = Comment.objects.get(
+                    id=comment_id_delete,
+                    name=request.user.username
+                )
                 comment_to_delete.delete()
                 messages.success(request, 'Comment deleted successfully.')
             except Comment.DoesNotExist:
-                messages.error(request, 'Comment not found or you do not have permission to delete it.')
+                messages.error(
+                    request,
+                    'Comment not found or permission denied.'
+                )
 
+        # Check if an edit comment request was made
         elif 'edit_comment_id' in request.POST:
             comment_id_edit = request.POST['edit_comment_id']
-            comment_to_edit = get_object_or_404(Comment, id=comment_id_edit, name=request.user.username)
+            comment_to_edit = get_object_or_404(
+                Comment,
+                id=comment_id_edit,
+                name=request.user.username
+            )
 
             if comment_form.is_valid():
                 comment_to_edit.body = comment_form.cleaned_data['body']
-                comment_to_edit.approved = False  # Re-approval required after editing
+                comment_to_edit.approved = False
                 comment_to_edit.save()
                 commented = True
-                messages.success(request, 'Comment updated successfully. Awaiting approval.')
+                messages.success(
+                    request,
+                    'Comment updated successfully. Awaiting approval.'
+                )
             else:
-                # Re-initialize form with the existing comment body for display in the template
-                """ comment_form = CommentForm(initial={'body': comment_to_edit.body}) """
                 error_validation = True
-                messages.error(request, 'Error updating comment. Please correct the errors below.')
-                
+                messages.error(
+                    request,
+                    'Error updating comment. Please correct the errors below.'
+                )
+
                 return render(
                     request,
                     "post_detail.html",
@@ -163,6 +183,7 @@ class PostDetail(generic.View):
                     },
                 )
 
+        # Handle new comment submission
         elif comment_form.is_valid():
             comment_form.instance.email = request.user.email
             comment_form.instance.name = request.user.username
@@ -170,9 +191,15 @@ class PostDetail(generic.View):
             commented = True
             comment.post = post
             comment.save()
-            messages.success(request, 'Comment submitted successfully. Awaiting approval.')
+            messages.success(
+                request,
+                'Comment submitted successfully. Awaiting approval.'
+            )
         else:
-            messages.error(request, 'Error submitting comment. Please correct the errors below.')
+            messages.error(
+                request,
+                'Error submitting comment. Please correct the errors below.'
+            )
 
         return render(
             request,
@@ -186,6 +213,7 @@ class PostDetail(generic.View):
                 "liked": liked,
             },
         )
+
 
 class PostLike(View):
     """

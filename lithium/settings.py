@@ -36,7 +36,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['8000-ahmadalhind-lithiumbatt-u1bvmuvuz6a.ws-eu114.gitpod.io']
 
-#'lithium2023-734017e000a2.herokuapp.com'
+# 'lithium2023-734017e000a2.herokuapp.com'
 
 # Application definition
 

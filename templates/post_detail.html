@@ -129,7 +129,6 @@
             <form method="post" action="{% url 'post_detail' slug=post.slug %}">
               {% csrf_token %}
               <input type="hidden" name="edit_comment_id" value="{{ comment.id }}">
-              <!-- New comment body field pre-filled with the old comment body -->
               <textarea name="body" class="form-control" rows="3">{{ comment.body }}</textarea>
               <button type="submit" class="btn btn-outline-success btn-sm">Update Comment</button>
               <button type="button" class="btn btn-outline-secondary btn-sm" onclick="hideEditForm('{{ comment.id }}')">Cancel</button>
@@ -181,16 +180,17 @@
 </div>
 
 <script>
+// Function to display the edit form for a specific comment
 function showEditForm(commentId) {
     document.getElementById('comment-body-' + commentId).style.display = 'none';
     document.getElementById('edit-form-' + commentId).style.display = 'block';
 }
 
+// Function to hide the edit form and show the comment body again
 function hideEditForm(commentId) {
     document.getElementById('comment-body-' + commentId).style.display = 'block';
     document.getElementById('edit-form-' + commentId).style.display = 'none';
 }
-
 </script>
 
 {% endblock content %}
