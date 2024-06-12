@@ -76,11 +76,9 @@
                 {% endif %}
               </form>
               {% else %}
-              <span class="text-secondary"
-                ><i
-                  class="fa-solid fa-heart-circle-bolt fa-xl"
-                ></i
-              ></span>
+              <span class="like-warning text-secondary">
+                <i class="fa-solid fa-heart-circle-bolt fa-xl" data-bs-toggle="tooltip" title="Please register or log in to like this post"></i>
+              </span>
               {% endif %}
               <!-- The number of likes -->
               <span class="text-secondary">{{ post.number_of_likes }} </span>
@@ -192,6 +190,7 @@ function hideEditForm(commentId) {
     document.getElementById('comment-body-' + commentId).style.display = 'block';
     document.getElementById('edit-form-' + commentId).style.display = 'none';
 }
+
 </script>
 
 {% endblock content %}
