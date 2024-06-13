@@ -81,28 +81,65 @@ Visit [GitHub Repository](https://github.com/Ahmadalhindi/lithium-battery-recycl
 - Investors who are interested in buying stocks from lithium battery recycle forms.
 - People who can't afford to pay for membership.
 
-## User Stories
+## Agile Methodology 
+Milestones & User Stories:
+
+The project was developed with 6 milestones and each contains their user stories that labeled according to its priority:
+
+Link to the [Lithium Recycle Blog User stories project](https://github.com/users/Ahmadalhindi/projects/12).
+
+
+<p align="center">
+<img src="documentation/readme_images/milestones.png" alt="Milestones">
+</p>
+
+<p align="center">
+<img src="documentation/readme_images/project.png" alt="Project">
+</p>
+
+### Milestone: Categories
 | <div align="center">#</div> | <div align="center">Title</div> |  <div align="center">User/Registered user/Admin</div> | <div align="center">Content</div> | <div align="center">Label</div> |
 | :------: | :------: | :------: | ------ | :------: |
 | [2](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/2) | View categories | User/Registered User/Admin | I want to be able to view all the categories as default so that I can fast choose one particular category. | <span style="color:red">Must have</span> |
 | [3](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/3) | List the Categories | User/Registered User/Admin | I want to be able to view the categories on navigation bar as buttons so that I can freely click on each category without leaving the category navigation bar in the home page. | <span style="color:green">Nice to have</span> |
+| [19](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/19) | Manage Categories | Admin | I want to be able to create, edit and delete categories so that I can organize and categorize posts effectively. | <span style="color:red">Must have</span> |
+
+### Milestone: Blog Posts
+| <div align="center">#</div> | <div align="center">Title</div> |  <div align="center">User/Registered user/Admin</div> | <div align="center">Content</div> | <div align="center">Label</div> |
+| :------: | :------: | :------: | ------ | :------: |
 | [4](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/4) | View List Blog Posts | User/Registered User/Admin | I want to view a list of all blog posts as default on the homepage so that I can fast select one to read. | <span  style="color:red">Must have</span> |
-| [5](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/5) | Site pagination | User/Registered User/Admin | I want to view a paginated list of posts so that easily select post to view. | <span style="color:green">Nice to have</span>  |
-| [6](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/6) | View posts of each category in the same page | User/Registered User/Admin | I want to view a list of blog posts of each category in the same page so that I can easily click on category links and see the corresponding blog posts in the same page. | <span style="color:green">Nice to have</span> |
+| [6](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/6) | View Posts of each Category in the same page | User/Registered User/Admin | I want to view a list of blog posts of each category in the same page so that I can easily click on category links and see the corresponding blog posts in the same page. | <span style="color:green">Nice to have</span> |
 | [7](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/7) | Read Full Blog Post | User/Registered User/Admin | I want to be able to click on a specific blog post so that I can access its complete content. | <span style="color:red">Must have</span> |
-| [8](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/8) | Manage blog posts | Admin | I want to be able to create, read, update and delete posts so that I can manage my posts if necessary. | <span style="color:red">Must have</span> |
-| [9](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/9) | Create draft posts | Admin | I want to be able to create draft posts so that I can freely complete writing the drafts the time I want. | <span style="color:yellow">Should have</span> |
+| [8](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/8) | Manage Blog Posts | Admin | I want to be able to create, read, update and delete posts so that I can manage my posts if necessary. | <span style="color:red">Must have</span> |
+| [9](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/9) | Create Draft Posts | Admin | I want to be able to create draft posts so that I can freely complete writing the drafts the time I want. | <span style="color:yellow">Should have</span> |
+
+### Milestone: Comments
+| <div align="center">#</div> | <div align="center">Title</div> |  <div align="center">User/Registered user/Admin</div> | <div align="center">Content</div> | <div align="center">Label</div> |
+| :------: | :------: | :------: | ------ | :------: |
 | [10](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/10) | Comment on Blog Posts | Registered User/Admin | I want to be able to leave comments on blog posts so that I can engage on the post and share my thoughts. | <span style="color:red">Must have</span> |
 | [11](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/11) | Approve Comments | Admin | I want to be able to approve or disapprove comments on blog post so that I can ensure the quality of conversation on the site. | <span style="color:yellow">Should have</span> |
-| [12](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/12) | View comments | User/Registered User/Admin | I want to be able to view comments on each post so that I can read the conversation. | <span style="color:red">Must have</span> |
-| [13](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/13) | View likes | User/Registered User/Admin | I want to be able to see how many likes in post so that I can know how important this post. | <span style="color:red">Must have</span> |
-| [14](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/14) | Like/undo like Posts | Registered User/Admin | I want to be able to like or Like/undo like for blog posts so that I can express my opinion on the content. | <span style="color:red">Must have</span> |
+| [12](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/12) | View Comments | User/Registered User/Admin | I want to be able to view comments on each post so that I can read the conversation. | <span style="color:red">Must have</span> |
+| [20](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/20) | Delete Comments | Registered User/Admin | I want to be able to delete my own comments so that I can manage and control my own comments. | <span style="color:yellow">Should have</span> |
+| [21](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/21) | Edit Comments | Registered User/Admin | I want be able to edit my own comment so that I can correct the comment that I posted when I need. | <span style="color:red">Must have</span> |
+| [22](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/22) | Approve Edited Comments | Admin | I want Approve Edited Comments so that I can assure the safety of the website. | <span style="color:yellow">Should have</span> |
+
+### Milestone: Like/Unlike
+| <div align="center">#</div> | <div align="center">Title</div> |  <div align="center">User/Registered user/Admin</div> | <div align="center">Content</div> | <div align="center">Label</div> |
+| :------: | :------: | :------: | ------ | :------: |
+| [13](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/13) | View Likes | User/Registered User/Admin | I want to be able to see how many likes in post so that I can know how important this post. | <span style="color:red">Must have</span> |
+| [14](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/14) | Like/Undo Like Posts | Registered User/Admin | I want to be able to like or Like/undo like for blog posts so that I can express my opinion on the content. | <span style="color:red">Must have</span> |
+
+### Milestone: Authentication
+| <div align="center">#</div> | <div align="center">Title</div> |  <div align="center">User/Registered user/Admin</div> | <div align="center">Content</div> | <div align="center">Label</div> |
+| :------: | :------: | :------: | ------ | :------: |
 | [15](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/15) | User Registration | User | I want to be able to sign up for a new account with a unique username and password so that I can comment and like. | <span style="color:red">Must have</span> |
-| [16](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/16) | Responsive Design | User/Registered User/Admin | I want the blog site to be responsive as accessing from different devices so that I can easily surf and navigate the site on various screen sizes. | <span style="color:red">Must have</span> |
-| [17](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/16) | Search for blogs | User/Registered User/Admin | Deleted - Issue not accomplish for lack of time | <span style="color:green">Nice to have</span> - Deleted |
 | [18](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/18) | Log in / Log out | Registered User/Admin | I want to be able to log in and log out from my account so that I can interact with the blog and ensure the safety of my personal content when I log out. | <span style="color:red">Must have</span> |
-| [19](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/19) | Manage Categories | Admin | I want to be able to create, edit and delete categories so that I can organize and categorize posts effectively. | <span style="color:red">Must have</span> |
-| [20](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/20) | Delete comments | Registered User/Admin | I want to be able to delete my own comments so that I can manage and control my own comments. | <span style="color:yellow">Should have</span> |
+
+### Milestone: Design
+| <div align="center">#</div> | <div align="center">Title</div> |  <div align="center">User/Registered user/Admin</div> | <div align="center">Content</div> | <div align="center">Label</div> |
+| :------: | :------: | :------: | ------ | :------: |
+| [5](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/5) | Site Pagination | User/Registered User/Admin | I want to view a paginated list of posts so that easily select post to view. | <span style="color:green">Nice to have</span>  |
+| [16](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/16) | Responsive Design | User/Registered User/Admin | I want the blog site to be responsive as accessing from different devices so that I can easily surf and navigate the site on various screen sizes. | <span style="color:red">Must have</span> |
 
 - - -
 
@@ -291,6 +328,9 @@ This page allows visitors to read the full blog post and allows the registered u
 <img src="documentation/readme_images/postdetail_like.png" alt="postdetail_like">
 </p>
 
+<p align="center">
+<img src="documentation/readme_images/like_authentication_messages.png" alt="like_authentication_messages">
+</p>
 
 - **Comment icon**: Allows visitors to see the number of comments.
 
@@ -307,7 +347,7 @@ For engage in discussions, share opinions, provide feedback, ask questions, or o
 <img src="documentation/readme_images/postdetail_comment_visitors.png" alt="postdetail_comment_visitors">
 </p>
 
- The below picture displayed for registered users:
+ The below picture displayed for registered user (john):
 
 <p align="center">
 <img src="documentation/readme_images/postdetail_comment_registeredusers.png" alt="postdetail_comment_registeredusers">
@@ -319,21 +359,48 @@ For engage in discussions, share opinions, provide feedback, ask questions, or o
 <img src="documentation/readme_images/postdetail_comment_admin.png" alt="postdetail_comment_admin">
 </p>
 
-  - Display comments section: Allow visitors to see all comments with the name of commenters and dates of commenting. Also let the registered users delete their comments by clicking on the red button.
+  - Display comments section: Allows visitors to see all comments with the name of commenters and dates of commenting. Also let the registered users delete their comments by clicking on the red button.
 
   - Leave a comment section: Allows registered users to write a comment. But instead for visitor will display a welcoming message provided with a link to log in for leaving a comment.
 
-    Hint: The comment will not appear in the display comment section until the admin approves it.
+    **Hint**: For new comment and edited comment, the comment will not appear in the display comment section until the admin approves it.
 
 <p align="center">
 <img src="documentation/readme_images/postdetail_comment_approval.png" alt="Approve Comments">
 </p>
+
+- Edit comments: Displayed only to the owner of the comment to correct/update realted comment as a button - this comment need approval from admin after post it.
+
+- Delete comments: Displayed only to the owner of the comment to delete related comment as a button.
+
+  Confirmation delete comment: Yes/No selects to assert more caution.
 
 - **Back button to same cayegory**: Button will allow users to go back to the same category that belongs to the post.
 
 <p align="center">
 <img src="documentation/readme_images/postdetail_back_button.png" alt="postdetail_back_button">
 </p>
+
+### Succes/Error Messages and Validation:
+
+- Create/edit/delete comments:
+
+<p align="center">
+<img src="documentation/readme_images/comment_success_edit_messages.png" alt="comment_success_edit_messages">
+</p>
+
+<p align="center">
+<img src="documentation/readme_images/comment_succes_delete_messages.png" alt="comment_succes_delete_messages">
+</p>
+
+<p align="center">
+<img src="documentation/readme_images/comment_error_messages.png" alt="comment_error_messages">
+</p>
+
+<p align="center">
+<img src="documentation/readme_images/comment_error_messages_validation.png" alt="comment_error_messages_validation">
+</p>
+
 
 ## Sign Up
  Sign up Page considered as the entry point for new users to create accounts and access the platform's features like leave a comment, delete their own comment, or like a post.
