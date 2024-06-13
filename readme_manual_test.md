@@ -142,6 +142,20 @@ Comment published:
 <p align="center">
 <img src="documentation/readme_images/userstory10.png" alt="Comment on Blog Posts">
 </p>
+Succes message and a hint to wait for admin approval:
+<p align="center">
+<img src="documentation/readme_images/comment_success_edit_messages.png" alt="Approve Comments">
+<p align="center">
+<img src="documentation/readme_images/userstory11.png" alt="Approve Comments">
+</p>
+Error messages and validation:
+<p align="center">
+<img src="documentation/readme_images/comment_error_messages.png" alt="comment_error_messages">
+</p>
+
+<p align="center">
+<img src="documentation/readme_images/comment_error_messages_validation.png" alt="comment_error_messages_validation">
+</p>
 
 \
 &nbsp;
@@ -153,7 +167,9 @@ Write a comment:
 <p align="center">
 <img src="documentation/readme_images/userstory10_1.png" alt="Approve Comments">
 </p>
-Apear a hint for user to wait for approval:
+Succes message and a hint to wait for admin approval:
+<p align="center">
+<img src="documentation/readme_images/comment_success_edit_messages.png" alt="Approve Comments">
 <p align="center">
 <img src="documentation/readme_images/userstory11.png" alt="Approve Comments">
 </p>
@@ -199,6 +215,11 @@ Click on ike button:
 Click again to undo like:
 <p align="center">
 <img src="documentation/readme_images/userstory14.png" alt="Like/undo like Posts">
+</p>
+
+Authintication message:
+<p align="center">
+<img src="documentation/readme_images/like_authentication_messages.png" alt="like_authentication_messages">
 </p>
 
 
@@ -305,10 +326,62 @@ Confirm delete comment:
 <p align="center">
 <img src="documentation/readme_images/userstory20_1.png" alt="Delete comments">
 </p>
+Succes Message:
+<p align="center">
+<img src="documentation/readme_images/comment_succes_delete_messages.png" alt="comment_succes_delete_messages">
+</p>
 Comment deleted:
 <p align="center">
 <img src="documentation/readme_images/userstory20_2.png" alt="Delete comments">
 </p>
+
+\
+&nbsp;
+[21](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/21) - Edit Comments:
+
+As a Registered User/Admin I want be able to edit my own comment so that I can correct the comment that I posted when I need.
+
+[22](https://github.com/Ahmadalhindi/lithium-battery-recycle-blog/issues/22) - Approve Edited Comments:
+
+As an Admin I want Approve Edited Comments so that I can assure the safety of the website.
+
+Click on 'Edit' 
+<p align="center">
+<img src="documentation/readme_images/test_edit_comment.png" alt="Edit">
+</p>
+
+Click on 'Update Comment' or 'Cancel'
+<p align="center">
+<img src="documentation/readme_images/test_update_comment.png" alt="Update comments">
+</p>
+
+<p align="center">
+<img src="documentation/readme_images/test_succes_update_approval.png" alt="Comment approval">
+</p>
+
+After approve the comment from admin
+<p align="center">
+<img src="documentation/readme_images/test_succes_submit_comment.png" alt="Succes edit comment">
+</p>
+
+Succes/Error Messages and Validation:
+
+
+<p align="center">
+<img src="documentation/readme_images/test_succes_update_approval.png" alt="comment_success_edit_messages">
+</p>
+
+<p align="center">
+<img src="documentation/readme_images/test_error_Update_comment.png" alt="Update comment error message">
+</p>
+
+<p align="center">
+<img src="documentation/readme_images/test_error_Update_body_comment.png" alt="Update comment body error message">
+</p>
+
+
+
+
 
 - - -
 

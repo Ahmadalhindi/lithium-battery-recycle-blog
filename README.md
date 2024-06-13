@@ -35,7 +35,7 @@ Visit [GitHub Repository](https://github.com/Ahmadalhindi/lithium-battery-recycl
 - [User Experience/UX](#user-experienceux)
   - [Site Objectives](#site-objectives)
   - [Target Audience](#target-audience)
-  - [User Stories](#user-stories)
+  - [Agile Methodology](#agile-methodology)
 - [Structure](#structure)
   - [Entity-Relationship Diagram ERD](#entity-relationship-diagram-erd)
   - [Database Plan](#database-plan)
@@ -86,7 +86,7 @@ Milestones & User Stories:
 
 The project was developed with 6 milestones and each contains their user stories that labeled according to its priority:
 
-Link to the [Lithium Recycle Blog User stories project](https://github.com/users/Ahmadalhindi/projects/12).
+Link to the [Lithium Recycle Blog User stories project](https://github.com/users/Ahmadalhindi/projects/9).
 
 
 <p align="center">
@@ -363,12 +363,6 @@ For engage in discussions, share opinions, provide feedback, ask questions, or o
 
   - Leave a comment section: Allows registered users to write a comment. But instead for visitor will display a welcoming message provided with a link to log in for leaving a comment.
 
-    **Hint**: For new comment and edited comment, the comment will not appear in the display comment section until the admin approves it.
-
-<p align="center">
-<img src="documentation/readme_images/postdetail_comment_approval.png" alt="Approve Comments">
-</p>
-
 - Edit comments: Displayed only to the owner of the comment to correct/update realted comment as a button - this comment need approval from admin after post it.
 
 - Delete comments: Displayed only to the owner of the comment to delete related comment as a button.
@@ -383,14 +377,10 @@ For engage in discussions, share opinions, provide feedback, ask questions, or o
 
 ### Succes/Error Messages and Validation:
 
-- Create/edit/delete comments:
+- Create comment:
 
 <p align="center">
 <img src="documentation/readme_images/comment_success_edit_messages.png" alt="comment_success_edit_messages">
-</p>
-
-<p align="center">
-<img src="documentation/readme_images/comment_succes_delete_messages.png" alt="comment_succes_delete_messages">
 </p>
 
 <p align="center">
@@ -399,6 +389,24 @@ For engage in discussions, share opinions, provide feedback, ask questions, or o
 
 <p align="center">
 <img src="documentation/readme_images/comment_error_messages_validation.png" alt="comment_error_messages_validation">
+</p>
+
+- Edit comment:
+<p align="center">
+<img src="documentation/readme_images/test_succes_update_approval.png" alt="comment_success_edit_messages">
+</p>
+
+<p align="center">
+<img src="documentation/readme_images/test_error_Update_comment.png" alt="Update comment error message">
+</p>
+
+<p align="center">
+<img src="documentation/readme_images/test_error_Update_body_comment.png" alt="Update comment body error message">
+</p>
+
+- Delete comment:
+<p align="center">
+<img src="documentation/readme_images/comment_succes_delete_messages.png" alt="comment_succes_delete_messages">
 </p>
 
 
